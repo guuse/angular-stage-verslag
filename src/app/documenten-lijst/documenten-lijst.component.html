@@ -1,0 +1,7 @@
+<section class="content-section">
+  <div [innerHTML]="PrismicDOM.RichText.asHtml(slice.primary.text)">
+    <p>Link naar:<a href="{{PrismicDOM.Link.asUrl(slice.primary.documenten)}}">
+      {{PrismicDOM.RichText.asText(slice.primary.docu_title)}}
+    </a></p>
+  </div>
+</section>

@@ -1,14 +1,17 @@
 <div class="welcome">
   <div class="text">
-    <div class="title">
-      <h1>{{title}}</h1>
+    <div class="title"><h1>{{PrismicDOM.RichText.asText(documenten.data.title)}}</h1>
     </div>
     <div class="desc">
-      <p>{{desc}}</p>
-      <p>{{desc}}</p>
-      <!--<p>{{desc}}</p>-->
-      <!--<p>{{desc}}</p>-->
-      <!--<p>{{desc}}</p>-->
+      <div [innerHTML]="PrismicDOM.RichText.asHtml(documenten.data.content_block)"></div>
+    </div>
+  </div>
+  <div *ngFor="let slice of documenten.data.body">
+    <div [ngSwitch]="slice.slice_type">
+      <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>
+      <app-image *ngSwitchCase="'image_gallary'" [slice]="slice"></app-image>
+      <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice"></app-documenten-lijst>
     </div>
   </div>
 </div>
+

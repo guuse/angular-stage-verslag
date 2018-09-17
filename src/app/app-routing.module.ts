@@ -12,7 +12,7 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'stage', component: StageComponent},
     {path: 'documenten', component: DocumentenComponent},
-    {path: 'competenties/:id', component: CompetentieComponent}
+    {path: 'competenties/:name', component: CompetentieComponent}
 ];
 
 export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes);
