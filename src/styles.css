@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #71706f;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    background: #F8F9FA;
+}
+
+.content p {
+    padding: 0 5% 1% 10%;
+}
+
+.welcome
+p,
+img {
+    color: #71706f;
+    padding: 0 5% 1% 10%;
+}
+
+h1 {
+    font-size: 4vh;
+    text-align: center;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 120%;
+    padding: 1% 10% 1% 10%;
+    font-weight: 700;
+}
+
+h6 {
+    font-weight: 700;
+    color: #525252;
+    text-align: left;
+    margin: 1% 10% 1% 10%;
+}
+
+a {
+    color: #71706f;
+}
+
+strong {
+    color: darkorchid;
+    font-weight: bold;
+    font-size: 120%;
+    text-transform: uppercase;
+}
+
+img {
+    height: 300px;
+    width: 390px;
+    text-align: center;
+}
+
+.map{
+    margin-bottom: 2vh;
+}
