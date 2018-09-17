@@ -1,5 +1,5 @@
 export class Competentie {
-    id: number;
+    id: string;
     name: string;
     desc: string;
     constructor(id: number, name: string, desc: string) {

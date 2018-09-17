@@ -3,7 +3,8 @@
     <div class="title"><h1>{{PrismicDOM.RichText.asText(documenten.data.title)}}</h1>
     </div>
     <div class="desc">
-      <div [innerHTML]="PrismicDOM.RichText.asHtml(documenten.data.content_block)"></div>
+      <div><p>{{PrismicDOM.RichText.asText(documenten.data.content_block)}}</p>
+      </div>
     </div>
   </div>
   <div *ngFor="let slice of documenten.data.body">
