@@ -20,9 +20,11 @@ export class CompetentieComponent implements OnInit {
     }
 
     getCompetentie(): void {
-        const id = +this.route.snapshot.paramMap.get('id');
-        this.competentieService.getCompetentie(id)
-            .subscribe(competentie => this.competentie = competentie);
+        this.route.params.subscribe(params => {
+            let latestID = +params['id'];
+            this.competentieService.getCompetentie(latestID)
+                .subscribe(competentie => this.competentie = competentie);
+        });
     }
 
     ngOnInit() {

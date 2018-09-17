@@ -24,7 +24,7 @@
                 </a>
                 <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <div *ngFor="let competentie of competenties">
-                        <a class="dropdown-item" href="/competenties/{{competentie.id}}">{{competentie.name}}</a>
+                        <a class="dropdown-item" routerLink="/competenties/{{competentie.id}}">{{competentie.name}}</a>
                     </div>
                 </div>
             </li>
