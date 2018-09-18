@@ -1,4 +1,4 @@
-<div class="welcome">
+<div class="welcome" *ngIf="stage.data">
     <div class="text">
         <div class="title">
             <h1>{{PrismicDOM.RichText.asText(stage.data.title)}}</h1>

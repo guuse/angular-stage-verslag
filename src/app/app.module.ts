@@ -15,6 +15,7 @@ import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-i
 import { faMoneyBillAlt  } from '@fortawesome/free-regular-svg-icons';
 import { TextComponent } from './text/text.component';
 import { ImageComponent } from './image/image.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DocumentenLijstComponent } from './documenten-lijst/documenten-lijst.component';
 
 
@@ -31,6 +32,7 @@ library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
         FooterComponent,
         TextComponent,
         ImageComponent,
+        PageNotFoundComponent,
         DocumentenLijstComponent,
     ],
     imports: [
