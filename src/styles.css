@@ -1,4 +1,4 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+/*@import '~bootstrap/dist/css/bootstrap.min.css';*/
 
 html {
     font-size: 100%;
@@ -26,9 +26,10 @@ img {
 }
 
 h1 {
-    font-size: 4vh;
     text-align: center;
     font-weight: 900;
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
 
 h3 {
@@ -49,15 +50,12 @@ a {
 }
 
 strong {
-    color: darkorchid;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 120%;
     text-transform: uppercase;
 }
 
 img {
-    height: 300px;
-    width: 390px;
     text-align: center;
 }
 

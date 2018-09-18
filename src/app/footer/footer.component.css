@@ -1,9 +1,10 @@
 .ftr {
     text-align: center;
     width: 100%;
-    background-color: #F8F9FA;
     padding-top: 1%;
     margin-top: 1%;
+    background: linear-gradient(to top, rgba(82,82,82,0.2) 0%,rgba(82,82,82,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#00000000',GradientType=0 );
 }
 
 .ftr-icn {

@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {faMoneyBillAlt} from '@fortawesome/free-regular-svg-icons';
-import {Competentie} from '../competentie';
-import {CompetentieService} from '../competentie.service';
 import {from} from 'rxjs';
 import {PrismicService} from '../prismic.service';
 import PrismicDOM from 'prismic-dom';
@@ -14,21 +12,6 @@ import {CONFIG} from '../../prismic-configuration';
 })
 export class NavbarComponent implements OnInit {
     faMoneyBillAlt = faMoneyBillAlt;
-
-
-    // competenties: Competentie[];
-    //
-    // constructor(private competentieService: CompetentieService) {
-    // }
-    //
-    // getCompetenties(): void {
-    //     this.competentieService.getCompetenties()
-    //         .subscribe(competenties => this.competenties = competenties);
-    // }
-    //
-    // ngOnInit() {
-    //     this.getCompetenties();
-    // }
     PrismicDOM = PrismicDOM;
     Config = CONFIG;
     nav = Object;
@@ -42,9 +25,11 @@ export class NavbarComponent implements OnInit {
             .subscribe(nav => this.nav = nav['value']);
     }
 
+    public replace(content: string) {
+        return content.replace(/-/g, ' ').replace(/1/g, '');
+    }
+
     ngOnInit() {
         this.getNavbarDocument();
     }
-
-
 }

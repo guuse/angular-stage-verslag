@@ -1,7 +1,21 @@
-.dropper {
+.dropdown {
     cursor: pointer;
+    vertical-align: center;
+}
+
+.dropdown-menu {
+    background: white;
+    background: linear-gradient(to bottom, #F8F9FA 0%, #E9EAEB 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
 }
 
 .navbar {
     padding-left: 10%;
+    text-transform: capitalize;
+    background: linear-gradient(to bottom, rgba(82,82,82,0.2) 0%,rgba(82,82,82,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#00000000',GradientType=0 );
+}
+
+.navbar p {
+    color: #71706f;
 }

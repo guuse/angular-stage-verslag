@@ -1,7 +1,8 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <a class="navbar-brand">
         <fa-icon [icon]="faMoneyBillAlt"></fa-icon>
     </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,13 +19,18 @@
                         <a class="nav-link" routerLink="/{{PrismicDOM.RichText.asText(link.nav_item)}}">{{PrismicDOM.RichText.asText(link.nav_item)}}</a>
                     </li>
                 </div>
-                <li ngbDropdown class="nav-item dropdown dropper">
+
+                <li ngbDropdown class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle="">
                         Competenties
                     </a>
                     <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div *ngFor="let drop of nav.data.dropdown">
-                            <a class="dropdown-item" routerLink="/competenties/{{PrismicDOM.RichText.asText(drop.dropdown_item)}}">{{PrismicDOM.RichText.asText(drop.dropdown_item)}}</a>
+                            <a class="dropdown-item nav-item"
+                               routerLink="/competenties/{{PrismicDOM.RichText.asText(drop.dropdown_item)}}">
+                                <div [innerHTML]="replace(PrismicDOM.RichText.asHtml(drop.dropdown_item))">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </li>

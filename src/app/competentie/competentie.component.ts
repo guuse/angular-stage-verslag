@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {Competentie} from '../competentie';
-import {CompetentieService} from '../competentie.service';
-import {Location} from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { from } from 'rxjs';
+import { PrismicService } from '../prismic.service';
+import PrismicDOM from 'prismic-dom';
 
 @Component({
     selector: 'app-competentie',
@@ -11,24 +11,26 @@ import {Location} from '@angular/common';
 })
 
 export class CompetentieComponent implements OnInit {
-    competentie: Competentie;
+    content = Object;
+    PrismicDOM = PrismicDOM;
 
-    constructor(private route: ActivatedRoute,
-                private competentieService: CompetentieService,
-                private location: Location
+    constructor(
+        private route: ActivatedRoute,
+        private prismicService: PrismicService
     ) {
     }
 
-    getCompetentie(): void {
-        this.route.params.subscribe(params => {
-            let latestID = +params['id'];
-            this.competentieService.getCompetentie(latestID)
-                .subscribe(competentie => this.competentie = competentie);
-        });
-    }
-
     ngOnInit() {
-        this.getCompetentie();
+        this.route.params.subscribe(
+            params => {
+                const uid = this.route.snapshot.paramMap.get('uid');
+                this.getPageDocument(uid);
+            }
+        );
     }
 
+    getPageDocument(uid: string): void {
+        from(this.prismicService.getPageDocument(uid))
+            .subscribe(content => this.content = content['value']);
+    }
 }

@@ -4,9 +4,7 @@
             <h1>{{PrismicDOM.RichText.asText(stage.data.title)}}</h1>
         </div>
         <div class="desc">
-            <div>
-                <p>{{PrismicDOM.RichText.asText(stage.data.content_block)}}</p>
-            </div>
+            <div [innerHTML]="PrismicDOM.RichText.asHtml(stage.data.content_block)"></div>
         </div>
     </div>
     <div *ngFor="let slice of stage.data.body">
