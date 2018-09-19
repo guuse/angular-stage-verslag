@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
     }
 
     public replace(content: string) {
-        return content.replace(/-/g, ' ').replace(/1/g, '');
+        return content.replace(/-/g, ' ').replace(/1/g, '').replace(/E/g, 'e');
     }
 
     ngOnInit() {

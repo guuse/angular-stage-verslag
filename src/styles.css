@@ -1,11 +1,5 @@
-/*@import '~bootstrap/dist/css/bootstrap.min.css';*/
-
-html {
-    font-size: 100%;
-}
-
 body {
-    color: #71706f;
+    color: #5f5e5d;
     font-family: Lato, sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -14,39 +8,34 @@ body {
     background: #F8F9FA;
 }
 
-.content p {
-    padding: 0 5% 1% 10%;
-}
-
-.welcome
-p,
-img {
-    color: #71706f;
-    padding: 0 5% 1% 10%;
+.welcome p {
+    color: #5f5e5d;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 h1 {
     text-align: center;
     font-weight: 900;
-    margin-top: 1%;
-    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 h3 {
+    margin-top: 5%;
     font-size: 120%;
-    padding: 1% 10% 1% 10%;
     font-weight: 700;
 }
 
 h6 {
     font-weight: 700;
-    color: #525252;
+    font-size: 100%;
     text-align: left;
-    margin: 1% 10% 1% 10%;
+    margin-bottom: 5%;
 }
 
 a {
-    color: #71706f;
+    color: #5f5e5d;
 }
 
 strong {
@@ -55,10 +44,6 @@ strong {
     text-transform: uppercase;
 }
 
-img {
-    text-align: center;
-}
-
-.map{
-    margin-bottom: 2vh;
+.map {
+    margin-bottom: 2%;
 }

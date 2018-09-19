@@ -10,11 +10,12 @@
 }
 
 .navbar {
-    padding-left: 10%;
+    padding-left: 16%;
+    text-transform: capitalize;
     background: linear-gradient(to bottom, rgba(82,82,82,0.2) 0%,rgba(82,82,82,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#00000000',GradientType=0 );
 }
 
-.navbar p {
-    color: #71706f;
+li {
+    font-size: 120%;
 }
