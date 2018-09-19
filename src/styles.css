@@ -1,16 +1,23 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 body {
     color: #5f5e5d;
-    font-family: Lato, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.9;
     -webkit-font-smoothing: antialiased;
     background: #F8F9FA;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .welcome p {
     color: #5f5e5d;
-    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 h1 {
@@ -18,11 +25,10 @@ h1 {
     font-weight: 900;
     margin-top: 2%;
     margin-bottom: 5%;
-    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 h3 {
-    margin-top: 5%;
+    margin-top: 1rem;
     font-size: 120%;
     font-weight: 700;
 }
@@ -31,18 +37,40 @@ h6 {
     font-weight: 700;
     font-size: 100%;
     text-align: left;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
 
 a {
     color: #5f5e5d;
 }
 
-strong {
-    font-weight: 900;
+.dropdown-item strong {
     font-size: 120%;
     text-transform: uppercase;
+    color: #5f5e5d;
 }
+
+.dropdown-item p {
+    color: #5f5e5d;
+    margin-bottom: 0;
+}
+
+.dropdown-item:hover {
+    background-color: #5f5e5d;
+}
+
+.dropdown-item:hover strong {
+    font-weight: 900;
+    background-color: #5f5e5d;
+    color: white;
+}
+
+.dropdown-item:hover p {
+     font-weight: 900;
+     background-color: #5f5e5d;
+     color: white;
+ }
 
 .map {
     margin-bottom: 2%;

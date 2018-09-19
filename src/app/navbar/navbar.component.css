@@ -5,7 +5,7 @@
 
 .dropdown-menu {
     background: white;
-    background: linear-gradient(to bottom, #F8F9FA 0%, #E9EAEB 100%);
+    background: linear-gradient(to bottom, #f3f4f5 0%, #e9eaeb 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
 }
 
