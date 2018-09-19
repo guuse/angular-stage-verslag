@@ -17,6 +17,8 @@ import {TextComponent} from './text/text.component';
 import {ImageComponent} from './image/image.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {DocumentenLijstComponent} from './documenten-lijst/documenten-lijst.component';
+import {NgxSpinnerModule} from 'ngx-spinner';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
@@ -34,12 +36,14 @@ library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
         ImageComponent,
         PageNotFoundComponent,
         DocumentenLijstComponent,
+        SpinnerComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         NgbModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        NgxSpinnerModule
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA,
