@@ -5,7 +5,7 @@ export interface PrismicConfiguration {
 }
 
 export const CONFIG: PrismicConfiguration = {
-    apiEndpoint: 'https://cmstestingsite.prismic.io/api/v2',
+    apiEndpoint: 'https://stageverslag.prismic.io/api/v2',
     linkResolver(doc) {
         return '/';
     }

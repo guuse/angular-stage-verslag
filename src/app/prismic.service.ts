@@ -20,7 +20,7 @@ export class PrismicService {
 
     getHomepageDocument(): Promise<void | Observable<Object>> {
         return this.getApi().then((api) => {
-            return api.getByUID('page', 'homepage')
+            return api.getSingle('homepage')
                 .then((home) => {
                     return of(home);
                 });
@@ -47,7 +47,7 @@ export class PrismicService {
 
     getNavbarDocument(): Promise<void | Observable<Object>> {
         return this.getApi().then((api) => {
-            return api.getByUID('navigation', 'navbar')
+            return api.getSingle('navigation')
                 .then((nav) => {
                     return of(nav);
                 });
