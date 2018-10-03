@@ -11,7 +11,7 @@
     <div *ngFor="let slice of documenten.data.body" class="px-4">
         <div [ngSwitch]="slice.slice_type">
             <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>
-            <app-image *ngSwitchCase="'image_gallary'" [slice]="slice"></app-image>
+            <app-image *ngSwitchCase="'image'" [slice]="slice"></app-image>
             <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice"></app-documenten-lijst>
         </div>
     </div>
