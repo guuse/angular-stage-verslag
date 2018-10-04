@@ -1,6 +1,5 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import PrismicDOM from 'prismic-dom';
-import {ClickOutsideModule} from 'ng-click-outside';
 
 @Component({
     selector: 'app-image-modal',

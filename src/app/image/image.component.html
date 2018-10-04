@@ -7,8 +7,8 @@
 
     <div class="row justify-content-center image">
         <div class="desc col-md-8">
-            <img src="{{ slice.primary.image.url }}" alt="{{ slice.primary.image.alt }}" (click)="imageClicked()"/>
-            <p>{{ PrismicDOM.RichText.asText(slice.primary.name) }}</p>
+            <img src="{{ slice.primary.image.url }}" (click)="imageClicked()"/>
+            <p>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</p>
         </div>
     </div>
 </section>
