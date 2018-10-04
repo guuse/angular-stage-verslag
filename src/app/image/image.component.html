@@ -1,9 +1,13 @@
-<section *ngIf="slice">
-    <div class="row justify-content-center">
+<section *ngIf="slice" class="image">
+    <app-image-modal
+        *ngIf="clicked"
+        [slice] = "slice"
+        (close)="childCloseEventHandler()">
+    </app-image-modal>
+
+    <div class="row justify-content-center image">
         <div class="desc col-md-8">
-            <a href="{{PrismicDOM.Link.url(slice.primary.link)}}">
-                <img src="{{ slice.primary.image.url }}"/>
-            </a>
+            <img src="{{ slice.primary.image.url }}" alt="{{ slice.primary.image.alt }}" (click)="imageClicked()"/>
             <p>{{ PrismicDOM.RichText.asText(slice.primary.name) }}</p>
         </div>
     </div>

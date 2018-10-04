@@ -17,7 +17,7 @@ import {TextComponent} from './text/text.component';
 import {ImageComponent} from './image/image.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {DocumentenLijstComponent} from './documenten-lijst/documenten-lijst.component';
-
+import {ImageModalComponent} from './image-modal/image-modal.component';
 
 library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
 
@@ -34,6 +34,7 @@ library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
         ImageComponent,
         PageNotFoundComponent,
         DocumentenLijstComponent,
+        ImageModalComponent,
     ],
     imports: [
         BrowserModule,
