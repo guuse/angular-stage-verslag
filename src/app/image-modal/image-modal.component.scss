@@ -7,7 +7,8 @@
   margin-top: 1vh;
   height: auto;
   max-width: 100%;
-
+  animation-name: modal;
+  animation-duration: 1s;
 }
 
 .modal-item p{
@@ -19,7 +20,10 @@
           -1px -1px 0 #5F5F5F,
           1px -1px 0 #5F5F5F,
           -1px 1px 0 #5F5F5F,
-          1px 1px 0 #5F5F5F;}
+          1px 1px 0 #5F5F5F;
+  animation-name: text;
+  animation-duration: 1s;
+}
 
 .modalBg {
   z-index: 1;
@@ -29,4 +33,25 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, .7);
+  animation-name: modalBg;
+  animation-duration: 1s;
+}
+@keyframes text {
+  from {
+    bottom: -100vh;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes modalBg {
+  from {background-color: rgba(0, 0, 0, 0);}
+  to {background-color: rgba(0, 0, 0, .7);}
+}
+
+
+@keyframes modal {
+  from {max-width: 0%;}
+  to {max-width: 100%;}
 }
