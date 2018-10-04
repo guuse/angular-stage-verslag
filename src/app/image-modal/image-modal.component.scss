@@ -1,25 +1,25 @@
-.image-modal {
+.modal-item {
   z-index: 1000;
-  align-items: center;
   position: absolute;
-  & img {
-    position: fixed;
-    transform: scale(1.2);
-    bottom: 20%;
-  }
-  & p{
-    position: fixed;
-    color: white;
-    bottom: 10%;
-    font-size: larger;
-    font-weight: 900;
-    text-shadow:
-            -1px -1px 0 #5F5F5F,
-            1px -1px 0 #5F5F5F,
-            -1px 1px 0 #5F5F5F,
-            1px 1px 0 #5F5F5F;
-  }
 }
+
+.modal-item img {
+  margin-top: 1vh;
+  height: auto;
+  max-width: 100%;
+
+}
+
+.modal-item p{
+  position: relative;
+  color: white;
+  font-size: larger;
+  font-weight: 900;
+  text-shadow:
+          -1px -1px 0 #5F5F5F,
+          1px -1px 0 #5F5F5F,
+          -1px 1px 0 #5F5F5F,
+          1px 1px 0 #5F5F5F;}
 
 .modalBg {
   z-index: 1;

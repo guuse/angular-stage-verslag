@@ -1,8 +1,14 @@
-.image img {
+.desc {
+  height: 70%;
+  margin-top: 1vh;
+  margin-left: 6vw;
+}
+
+.desc img {
   text-align: center;
   margin-top: 1vh;
-  //max-height: 80%;
-  //max-width: 80%;
+  max-height: 70%;
+  max-width: 50%;
 }
 
 img:hover {
