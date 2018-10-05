@@ -1,12 +1,13 @@
 .modal-item {
   z-index: 1000;
-  position: absolute;
+  position: fixed;
+  top: 3vh;
 }
 
 .modal-item img {
   margin-top: 1vh;
-  height: auto;
-  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
   animation-name: modal;
   animation-duration: 1s;
 }

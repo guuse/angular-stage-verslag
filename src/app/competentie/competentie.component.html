@@ -14,6 +14,7 @@
     <br>
     <div *ngFor="let slice of content.data.body" class="px-4">
         <div [ngSwitch]="slice.slice_type">
+            <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice"></app-sub-title>
             <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>
             <app-image *ngSwitchCase="'image'" [slice]="slice"></app-image>
             <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice"></app-documenten-lijst>

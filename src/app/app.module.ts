@@ -18,6 +18,7 @@ import {ImageComponent} from './image/image.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {DocumentenLijstComponent} from './documenten-lijst/documenten-lijst.component';
 import {ImageModalComponent} from './image-modal/image-modal.component';
+import { SubTitleComponent } from './sub-title/sub-title.component';
 
 library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
 
@@ -35,6 +36,7 @@ library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
         PageNotFoundComponent,
         DocumentenLijstComponent,
         ImageModalComponent,
+        SubTitleComponent,
     ],
     imports: [
         BrowserModule,

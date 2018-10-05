@@ -33,6 +33,12 @@ h3 {
     font-weight: 700;
 }
 
+h4 {
+    font-size: 200%;
+    text-align: left;
+    margin-top: 3%;
+}
+
 h6 {
     font-weight: 700;
     font-size: 100%;
