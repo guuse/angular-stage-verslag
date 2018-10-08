@@ -6,5 +6,8 @@
         <div class="text-wrapper">
             <h4>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</h4>
         </div>
+        <div class="close-wrapper">
+            <a (click)="hideModal()" class="close-btn">X</a>
+        </div>
     </div>
 </section>
