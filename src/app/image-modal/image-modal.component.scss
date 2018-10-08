@@ -1,58 +1,70 @@
-.modal-item {
-  z-index: 1000;
+.modal-item{
   position: fixed;
-  top: 3vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation-name: modalBg;
+  animation-duration: 1s;
 }
 
-.modal-item img {
-  margin-top: 1vh;
+.img-wrapper{
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  animation-name: modal;
+  animation-duration: 1s;
+}
+
+.img-wrapper img {
   max-height: 80vh;
   width: auto;
   animation-name: modal;
   animation-duration: 1s;
 }
 
-.modal-item p{
-  position: relative;
-  color: white;
-  font-size: larger;
-  font-weight: 900;
-  text-shadow:
-          -1px -1px 0 #5F5F5F,
-          1px -1px 0 #5F5F5F,
-          -1px 1px 0 #5F5F5F,
-          1px 1px 0 #5F5F5F;
+.text-wrapper{
+  position: absolute;
+  width: auto;
+  height: 5vh;
   animation-name: text;
   animation-duration: 1s;
+  margin: auto;
+  bottom: 1%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
-.modalBg {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .7);
-  animation-name: modalBg;
-  animation-duration: 1s;
-}
-@keyframes text {
-  from {
-    bottom: -100vh;
-  }
-  to {
-    bottom: 0;
-  }
+.text-wrapper h4{
+  color: white;
+  font-weight: 900;
 }
 
 @keyframes modalBg {
   from {background-color: rgba(0, 0, 0, 0);}
-  to {background-color: rgba(0, 0, 0, .7);}
+  to {background-color: rgba(0, 0, 0, .8);}
 }
 
+@keyframes text {
+  from {
+    bottom: -50%;
+  }
+  to {
+    bottom: 1%;
+  }
+}
 
 @keyframes modal {
-  from {max-width: 0%;}
-  to {max-width: 100%;}
+  from {
+    top: -50%;
+  }
+  to {
+    top: 50%;
+  }
 }

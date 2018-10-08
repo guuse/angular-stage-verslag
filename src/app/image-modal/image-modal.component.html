@@ -1,9 +1,10 @@
 <section (click)="hideModal()">
-    <div class="row justify-content-center">
-        <div class="modal-item">
+    <div class="modal-item">
+        <div class="img-wrapper">
             <img src="{{ slice.primary.image.url }}"/>
-            <p>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</p>
+        </div>
+        <div class="text-wrapper">
+            <h4>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</h4>
         </div>
     </div>
-    <div class="modalBg"></div>
 </section>
