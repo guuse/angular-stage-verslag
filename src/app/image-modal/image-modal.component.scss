@@ -53,8 +53,12 @@
 }
 
 @keyframes modalBg {
-  from {background-color: rgba(0, 0, 0, 0);}
-  to {background-color: rgba(0, 0, 0, .8);}
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+  }
 }
 
 @keyframes modal {

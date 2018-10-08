@@ -11,16 +11,16 @@ import {DocumentenComponent} from './documenten/documenten.component';
 import {CompetentieComponent} from './competentie/competentie.component';
 import {FooterComponent} from './footer/footer.component';
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {faFacebook, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {faMoneyBillAlt} from '@fortawesome/free-regular-svg-icons';
+import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {TextComponent} from './text/text.component';
 import {ImageComponent} from './image/image.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {DocumentenLijstComponent} from './documenten-lijst/documenten-lijst.component';
 import {ImageModalComponent} from './image-modal/image-modal.component';
-import { SubTitleComponent } from './sub-title/sub-title.component';
+import {SubTitleComponent} from './sub-title/sub-title.component';
 
-library.add(faFacebook, faGithub, faLinkedin, faMoneyBillAlt);
+library.add(faGithub, faLinkedin, faEnvelope);
 
 @NgModule({
     declarations: [
