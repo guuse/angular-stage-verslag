@@ -10,7 +10,7 @@
   animation-duration: 1s;
 }
 
-.img-wrapper{
+.wrapper{
   display: inline-block;
   position: relative;
   margin: auto;
@@ -21,29 +21,17 @@
   animation-duration: 1s;
 }
 
-.img-wrapper img {
+.wrapper img {
   max-height: 90vh;
   max-width: 90vw;
   animation-name: modal;
   animation-duration: 1s;
 }
 
-.text-wrapper{
-  position: absolute;
-  width: auto;
-  height: 5vh;
-  animation-name: text;
-  animation-duration: 1s;
-  margin: auto;
-  bottom: 1%;
-  text-align: center;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.text-wrapper h4{
+.wrapper h3{
   color: white;
   font-weight: 900;
+  margin-top: 1vh;
 }
 
 .close-wrapper {
@@ -67,15 +55,6 @@
 @keyframes modalBg {
   from {background-color: rgba(0, 0, 0, 0);}
   to {background-color: rgba(0, 0, 0, .8);}
-}
-
-@keyframes text {
-  from {
-    bottom: -50%;
-  }
-  to {
-    bottom: 1%;
-  }
 }
 
 @keyframes modal {
