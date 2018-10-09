@@ -11,10 +11,10 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'not-found', component: PageNotFoundComponent},
-    {path: 'home', component: HomeComponent},
-    {path: 'stage', component: StageComponent},
-    {path: 'documenten', component: DocumentenComponent},
-    {path: 'competenties/:uid', component: CompetentieComponent}
+    {path: 'home', component: HomeComponent, data: { state: 'home'}},
+    {path: 'stage', component: StageComponent, data: { state: 'stage'}},
+    {path: 'documenten', component: DocumentenComponent, data: { state: 'documenten'}},
+    {path: 'competenties/:uid', component: CompetentieComponent, data: { state: 'competentie'}}
 ];
 
 export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes);

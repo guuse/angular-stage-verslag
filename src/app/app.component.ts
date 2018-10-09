@@ -1,13 +1,16 @@
 import {Component} from '@angular/core';
-import {trigger, state, style, animate, transition} from '@angular/animations';
+import {routerTransition} from './animations';
 
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    animations: []
+    animations: [routerTransition]
 })
-export class AppComponent {
 
+export class AppComponent {
+    public getState(outlet) {
+        return outlet.activatedRouteData.state;
+    }
 }

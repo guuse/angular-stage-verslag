@@ -4,11 +4,13 @@ import {from} from 'rxjs';
 import {PrismicService} from '../prismic.service';
 import PrismicDOM from 'prismic-dom';
 import {CONFIG} from '../../prismic-configuration';
+import {routerTransition} from '../animations';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.css']
+    styleUrls: ['./navbar.component.css'],
+    animations: [routerTransition]
 })
 export class NavbarComponent implements OnInit {
     faMoneyBillAlt = faMoneyBillAlt;

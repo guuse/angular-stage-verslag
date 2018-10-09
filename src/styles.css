@@ -78,6 +78,20 @@ a {
      color: white;
  }
 
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #5f5e5d;
+}
+
+.dropdown-item.active p{
+    color: white;
+    font-weight: 900;
+}
+
+.dropdown-item.active strong{
+    color: white;
+    font-weight: 900;
+}
+
 .map {
     margin-bottom: 2%;
 }

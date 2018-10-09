@@ -1,10 +1,10 @@
-<div class="welcome" *ngIf="content.data" [@openClose]="isOpen ? 'open' : 'closed'">
+<div class="welcome" *ngIf="content.data">
     <div class="text">
         <div class="compTitle">
             <h1>{{PrismicDOM.RichText.asText(content.data.title)}}</h1>
         </div>
         <hr class="col-md-8">
-        <div class="row justify-content-center px-4">
+        <div class="row justify-content-center px-4 compDesc">
             <div class="desc col-md-8">
                 <div [innerHTML]="PrismicDOM.RichText.asHtml(content.data.content_block)"></div>
             </div>
