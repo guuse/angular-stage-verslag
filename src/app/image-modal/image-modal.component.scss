@@ -8,6 +8,7 @@
   bottom: 0;
   animation-name: modalBg;
   animation-duration: 1s;
+  cursor: pointer;
 }
 
 .wrapper{
@@ -19,6 +20,7 @@
   transform: translate(-50%,-50%);
   animation-name: modal;
   animation-duration: 1s;
+  cursor: default;
 }
 
 .wrapper img {

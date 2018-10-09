@@ -19,6 +19,8 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {DocumentenLijstComponent} from './documenten-lijst/documenten-lijst.component';
 import {ImageModalComponent} from './image-modal/image-modal.component';
 import {SubTitleComponent} from './sub-title/sub-title.component';
+import {ClickOutsideModule} from 'ng4-click-outside';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 library.add(faGithub, faLinkedin, faEnvelope);
 
@@ -43,6 +45,8 @@ library.add(faGithub, faLinkedin, faEnvelope);
         AppRoutingModule,
         NgbModule,
         FontAwesomeModule,
+        ClickOutsideModule,
+        BrowserAnimationsModule,
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA,

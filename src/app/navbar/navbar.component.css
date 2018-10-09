@@ -10,7 +10,7 @@
 }
 
 .navbar {
-    padding-left: 17%;
+    padding-left: 18vw;
     text-transform: capitalize;
     background: linear-gradient(to bottom, rgba(82,82,82,0.2) 0%,rgba(82,82,82,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#00000000',GradientType=0 );
@@ -19,4 +19,11 @@
 
 li {
     font-size: 120%;
+}
+
+@media only screen and (max-width: 769px) {
+    .navbar{
+        padding-left: 7vw;
+        top: 2vh;
+    }
 }

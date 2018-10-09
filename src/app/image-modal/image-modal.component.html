@@ -1,6 +1,8 @@
-<section (click)="hideModal()">
+<section>
     <div class="modal-item">
-        <div class="wrapper">
+        <div class="wrapper"
+             (clickOutside)="hideModal()"
+             [delayClickOutsideInit]="true">
             <img src="{{ slice.primary.image.url }}"/>
             <h3>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</h3>
         </div>

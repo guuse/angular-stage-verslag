@@ -12,6 +12,8 @@ export class ImageModalComponent  {
     @Output() close = new EventEmitter();
 
     public hideModal() {
-        this.close.emit();
+        setTimeout(() => {
+            this.close.emit();
+        }, 100);
     }
 }
