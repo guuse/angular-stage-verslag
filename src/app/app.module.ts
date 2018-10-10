@@ -15,7 +15,6 @@ import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {TextComponent} from './text/text.component';
 import {ImageComponent} from './image/image.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {DocumentenLijstComponent} from './documenten-lijst/documenten-lijst.component';
 import {ImageModalComponent} from './image-modal/image-modal.component';
 import {SubTitleComponent} from './sub-title/sub-title.component';
@@ -35,7 +34,6 @@ library.add(faGithub, faLinkedin, faEnvelope);
         FooterComponent,
         TextComponent,
         ImageComponent,
-        PageNotFoundComponent,
         DocumentenLijstComponent,
         ImageModalComponent,
         SubTitleComponent,

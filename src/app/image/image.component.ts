@@ -9,7 +9,6 @@ import PrismicDOM from 'prismic-dom';
 
 export class ImageComponent {
     public clicked = false;
-
     @Input() slice: Object;
     PrismicDOM = PrismicDOM;
 
@@ -18,6 +17,6 @@ export class ImageComponent {
     }
 
     public childCloseEventHandler(): void {
-        this.clicked = false; // this will trigger the unload of the child, since you have `*ngIf="clicked"` for the child component
+        this.clicked = false;
     }
 }
