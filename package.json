@@ -1,6 +1,6 @@
 {
-  "name": "issa-crash",
-  "version": "0.0.0",
+  "name": "stageverslag",
+  "version": "1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

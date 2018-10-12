@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "issa-crash": {
+    "stageverslag": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/issa-crash",
+            "outputPath": "dist/stageverslag",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "issa-crash:build"
+            "browserTarget": "stageverslag:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "issa-crash:build:production"
+              "browserTarget": "stageverslag:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "issa-crash:build"
+            "browserTarget": "stageverslag:build"
           }
         },
         "test": {
@@ -96,7 +96,7 @@
         }
       }
     },
-    "issa-crash-e2e": {
+    "stageverslag-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "issa-crash:serve"
+            "devServerTarget": "stageverslag:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "issa-crash:serve:production"
+              "devServerTarget": "stageverslag:serve:production"
             }
           }
         },
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "issa-crash"
+  "defaultProject": "stageverslag"
 }
