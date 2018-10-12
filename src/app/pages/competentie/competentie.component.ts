@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {from} from 'rxjs';
-import {PrismicService} from '../prismic.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { from } from 'rxjs';
+import { PrismicService } from '../../services/prismic.service';
 import PrismicDOM from 'prismic-dom';
 
 @Component({

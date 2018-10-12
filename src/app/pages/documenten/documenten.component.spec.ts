@@ -1,27 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageComponent } from './image.component';
+import { DocumentenComponent } from './documenten.component';
 import {BrowserModule} from '@angular/platform-browser';
-import {AppRoutingModule} from '../app-routing.module';
+import {AppRoutingModule} from '../../routing/app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from '../home/home.component';
 import { StageComponent } from '../stage/stage.component';
-import { DocumentenComponent } from '../documenten/documenten.component';
 import { CompetentieComponent } from '../competentie/competentie.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-describe('ImageComponent', () => {
-  let component: ImageComponent;
-  let fixture: ComponentFixture<ImageComponent>;
+describe('DocumentenComponent', () => {
+  let component: DocumentenComponent;
+  let fixture: ComponentFixture<DocumentenComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-          ImageComponent,
+          DocumentenComponent,
           HomeComponent,
           StageComponent,
-          DocumentenComponent,
           CompetentieComponent
       ],
         imports: [
@@ -38,7 +36,7 @@ describe('ImageComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImageComponent);
+    fixture = TestBed.createComponent(DocumentenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

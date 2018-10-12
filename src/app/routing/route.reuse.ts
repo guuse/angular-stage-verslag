@@ -1,7 +1,8 @@
 import { ActivatedRouteSnapshot, DetachedRouteHandle, RouteReuseStrategy } from '@angular/router';
+
 export class CustomReuseStrategy implements RouteReuseStrategy {
 
-    private handlers: {[key: string]: DetachedRouteHandle} = {};
+    private handlers: { [key: string]: DetachedRouteHandle } = {};
 
 
     constructor() {

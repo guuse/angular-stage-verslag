@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 
 import * as Prismic from 'prismic-javascript';
-import {CONFIG} from '../prismic-configuration';
+import {CONFIG} from '../../prismic-configuration';
 
 @Injectable({providedIn: 'root'})
 export class PrismicService {

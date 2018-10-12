@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import PrismicDOM from 'prismic-dom';
 
 @Component({
@@ -6,7 +6,7 @@ import PrismicDOM from 'prismic-dom';
     templateUrl: './image-modal.component.html',
     styleUrls: ['./image-modal.component.scss']
 })
-export class ImageModalComponent  {
+export class ImageModalComponent {
     @Input() slice: Object;
     PrismicDOM = PrismicDOM;
     @Output() close = new EventEmitter();

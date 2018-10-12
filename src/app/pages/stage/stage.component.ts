@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {PrismicService} from '../prismic.service';
-import {from} from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { PrismicService } from '../../services/prismic.service';
+import { from } from 'rxjs';
 import PrismicDOM from 'prismic-dom';
 
 @Component({

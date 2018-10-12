@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {routerTransition} from './animations';
+import { Component } from '@angular/core';
+import { routerTransition } from './routing/animations';
 
 
 @Component({

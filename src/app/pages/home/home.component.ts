@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {from} from 'rxjs';
-import {PrismicService} from '../prismic.service';
+import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import { PrismicService } from '../../services/prismic.service';
 import PrismicDOM from 'prismic-dom';
 
 @Component({
@@ -13,7 +13,8 @@ export class HomeComponent implements OnInit {
     home = Object;
     PrismicDOM = PrismicDOM;
 
-    constructor(private prismicService: PrismicService) { }
+    constructor(private prismicService: PrismicService) {
+    }
 
     ngOnInit() {
         this.getHomepageDocument();

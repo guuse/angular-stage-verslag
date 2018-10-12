@@ -1,10 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {faMoneyBillAlt} from '@fortawesome/free-regular-svg-icons';
-import {from} from 'rxjs';
-import {PrismicService} from '../prismic.service';
+import { Component, OnInit } from '@angular/core';
+import { faMoneyBillAlt } from '@fortawesome/free-regular-svg-icons';
+import { from } from 'rxjs';
+import { PrismicService } from '../../services/prismic.service';
 import PrismicDOM from 'prismic-dom';
-import {CONFIG} from '../../prismic-configuration';
-import {routerTransition} from '../animations';
+import { routerTransition } from '../../routing/animations';
 
 @Component({
     selector: 'app-navbar',
@@ -15,7 +14,6 @@ import {routerTransition} from '../animations';
 export class NavbarComponent implements OnInit {
     faMoneyBillAlt = faMoneyBillAlt;
     PrismicDOM = PrismicDOM;
-    Config = CONFIG;
     nav = Object;
 
     constructor(private prismicService: PrismicService) {

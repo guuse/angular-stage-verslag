@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StageComponent } from './stage/stage.component';
-import { DocumentenComponent } from './documenten/documenten.component';
-import { HomeComponent } from './home/home.component';
-import { CompetentieComponent } from './competentie/competentie.component';
+import { StageComponent } from '../pages/stage/stage.component';
+import { DocumentenComponent } from '../pages/documenten/documenten.component';
+import { HomeComponent } from '../pages/home/home.component';
+import { CompetentieComponent } from '../pages/competentie/competentie.component';
 import { ModuleWithProviders } from '@angular/core';
 import { RouteReuseStrategy } from '@angular/router';
 import { CustomReuseStrategy } from './route.reuse';
