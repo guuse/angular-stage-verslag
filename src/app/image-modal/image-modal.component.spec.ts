@@ -40,6 +40,7 @@ xdescribe('ImageModalComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(ImageModalComponent);
         component = fixture.componentInstance;
+        // Add mock backend so primary/slice isn't unidentified or null
         fixture.detectChanges();
     });
 

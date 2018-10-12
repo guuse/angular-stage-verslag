@@ -1,26 +1,31 @@
-import { ActivatedRouteSnapshot, DetachedRouteHandle } from '@angular/router';
-import {DefaultRouteReuseStrategy} from '@angular/router/src/route_reuse_strategy';
+import { ActivatedRouteSnapshot, DetachedRouteHandle, RouteReuseStrategy } from '@angular/router';
+export class CustomReuseStrategy implements RouteReuseStrategy {
 
-export class CustomReuseStrategy implements DefaultRouteReuseStrategy {
+    private handlers: {[key: string]: DetachedRouteHandle} = {};
+
+
+    constructor() {
+
+    }
 
     shouldDetach(route: ActivatedRouteSnapshot): boolean {
         return false;
     }
 
-    store(route: ActivatedRouteSnapshot, handle: DetachedRouteHandle): boolean {
-        return false;
+    store(route: ActivatedRouteSnapshot, handle: DetachedRouteHandle): void {
+        this.handlers[route.url.join('/') || route.parent.url.join('/')] = handle;
     }
 
     shouldAttach(route: ActivatedRouteSnapshot): boolean {
-        return false;
+        return !!this.handlers[route.url.join('/') || route.parent.url.join('/')];
     }
 
     retrieve(route: ActivatedRouteSnapshot): DetachedRouteHandle {
-        return false;
+        return this.handlers[route.url.join('/') || route.parent.url.join('/')];
     }
 
     shouldReuseRoute(future: ActivatedRouteSnapshot, curr: ActivatedRouteSnapshot): boolean {
-        return false;
+        return future.routeConfig === curr.routeConfig;
     }
 
 }

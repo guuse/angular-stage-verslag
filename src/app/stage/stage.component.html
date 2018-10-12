@@ -3,11 +3,6 @@
         <div class="title">
             <h1>{{PrismicDOM.RichText.asText(stage.data.title)}}</h1>
         </div>
-        <div class="row justify-content-center px-4">
-            <div class="desc col-md-8">
-                <div [innerHTML]="PrismicDOM.RichText.asHtml(stage.data.content_block)"></div>
-            </div>
-        </div>
     </div>
     <div *ngFor="let slice of stage.data.body" class="px-4">
         <div [ngSwitch]="slice.slice_type">

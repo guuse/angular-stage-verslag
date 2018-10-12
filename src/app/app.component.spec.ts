@@ -10,7 +10,7 @@ import { DocumentenComponent } from './documenten/documenten.component';
 import { CompetentieComponent } from './competentie/competentie.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-describe('AppComponent', () => {
+qdescribe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [

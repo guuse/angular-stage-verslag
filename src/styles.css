@@ -78,18 +78,20 @@ a {
      color: white;
  }
 
-.dropdown-item.active, .dropdown-item:active {
-    background-color: #5f5e5d;
+.dropdown-item.active {
+    background-color: rgba(135, 135, 135, 0.3);
 }
 
 .dropdown-item.active p{
-    color: white;
+    font-size: 110%;
     font-weight: 900;
+    background-color: inherit;
 }
 
 .dropdown-item.active strong{
-    color: white;
+    font-size: 110%;
     font-weight: 900;
+    background-color: inherit;
 }
 
 .map {
