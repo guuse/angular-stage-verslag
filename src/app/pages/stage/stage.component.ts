@@ -6,7 +6,7 @@ import PrismicDOM from 'prismic-dom';
 @Component({
     selector: 'app-stage',
     templateUrl: './stage.component.html',
-    styleUrls: ['./stage.component.css']
+    styleUrls: ['./stage.component.scss']
 })
 export class StageComponent implements OnInit {
     stage = Object;

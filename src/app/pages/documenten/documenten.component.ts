@@ -6,7 +6,7 @@ import PrismicDOM from 'prismic-dom';
 @Component({
     selector: 'app-documenten',
     templateUrl: './documenten.component.html',
-    styleUrls: ['./documenten.component.css']
+    styleUrls: ['./documenten.component.scss']
 })
 export class DocumentenComponent implements OnInit {
     documenten = Object;

@@ -3,8 +3,12 @@
         <div class="title">
             <h1>{{PrismicDOM.RichText.asText(stage.data.title)}}</h1>
         </div>
+        <div class="desc">
+            <div [innerHTML]="PrismicDOM.RichText.asHtml(stage.data.content_block)"></div>
+        </div>
     </div>
-    <div *ngFor="let slice of stage.data.body" class="px-4">
+    <hr>
+    <div *ngFor="let slice of stage.data.body" class="slices">
         <div [ngSwitch]="slice.slice_type">
             <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice"></app-sub-title>
             <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>

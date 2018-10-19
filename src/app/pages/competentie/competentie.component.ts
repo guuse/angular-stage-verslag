@@ -7,7 +7,7 @@ import PrismicDOM from 'prismic-dom';
 @Component({
     selector: 'app-competentie',
     templateUrl: './competentie.component.html',
-    styleUrls: ['./competentie.component.css'],
+    styleUrls: ['./competentie.component.scss'],
 })
 
 export class CompetentieComponent implements OnInit {

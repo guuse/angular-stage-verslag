@@ -3,15 +3,13 @@
         <div class="compTitle">
             <h1>{{PrismicDOM.RichText.asText(content.data.title)}}</h1>
         </div>
-        <hr class="col-md-8">
-        <div class="row justify-content-center px-4 compDesc">
-            <div class="desc col-md-8">
-                <div [innerHTML]="PrismicDOM.RichText.asHtml(content.data.content_block)"></div>
-            </div>
+        <hr>
+        <div class="desc">
+            <div [innerHTML]="PrismicDOM.RichText.asHtml(content.data.content_block)"></div>
         </div>
+        <hr>
     </div>
-    <hr class="col-md-8">
-    <div *ngFor="let slice of content.data.body" class="px-4">
+    <div *ngFor="let slice of content.data.body" class="slices">
         <div [ngSwitch]="slice.slice_type">
             <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice"></app-sub-title>
             <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>

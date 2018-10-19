@@ -2,8 +2,8 @@
     <div class="title">
         <h1>{{ PrismicDOM.RichText.asText(home.data.title) }}</h1>
     </div>
-    <div class="row justify-content-center px-4">
-        <div class="desc col-md-8">
+    <div class="justify-content-center">
+        <div class="desc">
             <div [innerHTML]="PrismicDOM.RichText.asHtml(home.data.description)"></div>
         </div>
     </div>

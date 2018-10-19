@@ -1,0 +1,27 @@
+h1 {
+    margin-bottom: 3vh;
+}
+
+hr {
+    margin: 20px 18vw;
+
+    @media screen and (max-width: 678px) {
+        margin: 20px 18px;
+    }
+}
+
+.slices {
+    margin: 0 18vw;
+
+    @media screen and (max-width: 678px) {
+        margin: 0 18px;
+    }
+}
+
+.text {
+    margin: 0 18vw;
+
+    @media screen and (max-width: 678px) {
+        margin: 0 18px;
+    }
+}

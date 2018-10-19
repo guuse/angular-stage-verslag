@@ -1,14 +1,14 @@
 <div class="welcome" *ngIf="documenten.data">
     <div class="text">
-        <div class="title"><h1>{{PrismicDOM.RichText.asText(documenten.data.title)}}</h1>
+        <div class="title">
+            <h1>{{PrismicDOM.RichText.asText(documenten.data.title)}}</h1>
         </div>
-        <div class="row justify-content-center px-4">
-            <div class="desc col-md-8">
-                <div [innerHTML]="PrismicDOM.RichText.asHtml(documenten.data.content_block)"></div>
-            </div>
+        <div class="desc">
+            <div [innerHTML]="PrismicDOM.RichText.asHtml(documenten.data.content_block)"></div>
         </div>
     </div>
-    <div *ngFor="let slice of documenten.data.body" class="px-4">
+    <hr>
+    <div *ngFor="let slice of documenten.data.body" class="slices">
         <div [ngSwitch]="slice.slice_type">
             <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice"></app-sub-title>
             <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>

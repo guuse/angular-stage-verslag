@@ -1,0 +1,13 @@
+iframe {
+    margin-top: 3vh;
+}
+
+.desc {
+    color: #5f5e5d;
+    line-height: normal;
+    margin: 0 18vw;
+
+    @media screen and (max-width: 678px) {
+        margin: 0 18px;
+    }
+}

@@ -21,10 +21,6 @@
   animation-name: modal;
   animation-duration: 1s;
   cursor: default;
-
-  @media screen and (max-width: 768px){
-    margin: 10px 10px;
-  }
 }
 
 .wrapper img {
@@ -32,12 +28,19 @@
   max-width: 90vw;
   animation-name: modal;
   animation-duration: 1s;
+
+  @media screen and (max-width: 678px) {
+    margin: 0 5vw;
+  }
 }
 
 .wrapper h3 {
   color: white;
   font-weight: 900;
-  margin-top: 1vh;
+
+  @media screen and (max-width: 678px){
+    margin: 0 5vw;
+  }
 }
 
 .close-wrapper {
@@ -46,10 +49,6 @@
   right: 2vw;
   transform: scale(1.2);
   display: inline;
-
-  @media screen and (max-width: 768px){
-    display: none;
-  }
 }
 
 .close-btn {

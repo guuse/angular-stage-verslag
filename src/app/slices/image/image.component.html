@@ -5,8 +5,8 @@
         (close)="childCloseEventHandler()">
     </app-image-modal>
 
-    <div class="row justify-content-center image">
-        <div class="desc col-md-8">
+    <div class="image">
+        <div class="desc">
             <img src="{{ slice.primary.image.url }}" (click)="imageClicked()"/>
             <p>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</p>
         </div>
