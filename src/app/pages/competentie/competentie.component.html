@@ -3,7 +3,7 @@
         <div class="compTitle">
             <h1>{{PrismicDOM.RichText.asText(content.data.title)}}</h1>
         </div>
-        <hr *ngIf="!content.data.body[1]">
+        <hr>
         <div class="desc">
             <div [innerHTML]="PrismicDOM.RichText.asHtml(content.data.content_block)"></div>
         </div>

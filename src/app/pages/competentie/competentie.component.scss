@@ -5,15 +5,15 @@ h1 {
 hr{
     margin: 20px -18px;
 
-    @media screen and (max-width: 678px) {
+    @media screen and (max-width: 768px) {
         margin: 20px -6px;
     }
 }
 
 .text {
-    margin: 0 18vw;
+    margin: 0 30vw;
 
-    @media screen and (max-width: 678px) {
+    @media screen and (max-width: 768px) {
         margin: 0 18px;
     }
 }
@@ -21,7 +21,7 @@ hr{
 .slices {
     margin: 0 10vw;
 
-    @media screen and (max-width: 678px) {
+    @media screen and (max-width: 768px) {
         margin: 0 18px;
     }
 }
