@@ -1,4 +1,4 @@
-.modal-item{
+.modal-item {
   position: fixed;
   z-index: 1;
   background-color: rgba(0, 0, 0, .8);
@@ -11,16 +11,20 @@
   cursor: pointer;
 }
 
-.wrapper{
+.wrapper {
   display: inline-block;
   position: relative;
   margin: auto;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   animation-name: modal;
   animation-duration: 1s;
   cursor: default;
+
+  @media screen and (max-width: 768px){
+    margin: 10px 10px;
+  }
 }
 
 .wrapper img {
@@ -30,7 +34,7 @@
   animation-duration: 1s;
 }
 
-.wrapper h3{
+.wrapper h3 {
   color: white;
   font-weight: 900;
   margin-top: 1vh;
@@ -46,10 +50,11 @@
 .close-btn {
   background: rgba(255, 255, 255, .8);
   border-radius: 25px;
-  cursor:pointer;
-  padding:6px 24px;
+  cursor: pointer;
+  padding: 6px 24px;
   font-weight: 900;
 }
+
 .close-btn:hover {
   background: rgba(255, 255, 255, 1);
 }
