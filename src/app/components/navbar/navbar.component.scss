@@ -1,35 +1,27 @@
-.dropdown {
-    cursor: pointer;
-    vertical-align: center;
-}
-
-.dropdown-menu {
-    background: white;
-    background: linear-gradient(to bottom, #f3f4f5 0%, #e9eaeb 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
-
-    p {
-        padding-left: 18px;
-    }
-}
-
 .navbar {
     padding-left: calc(18vw - 8px);
     text-transform: capitalize;
-    background: linear-gradient(to bottom, rgba(82,82,82,0.2) 0%,rgba(82,82,82,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#00000000',GradientType=0 );
+    background: rgba(82,82,82,0.8);
     z-index: 1;
+    border-bottom: 2px solid rgba(248,249,250,.5);
+    border-top: 1px solid rgba(248,249,250,.5);
 
-    @media screen and (max-width: 768px) {
-        padding-left: 18px;
+    @media screen and (max-width: 991px) {
+        padding-left: 36px;
+        border: 0;
+        background: 0;
     }
+}
+
+.navbar button {
+    background: #a5a5a5;
 }
 
 li {
     font-size: 120%;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 991px) {
     .navbar{
         top: 2vh;
     }
@@ -38,11 +30,52 @@ li {
 .navbar-wrapper {
     text-align: center;
     width: 50%;
+
     p {
         width: 50%;
         text-align: left;
     }
     a {
         text-align: left;
+        color: rgba(248, 249, 250, .8);
+    }
+
+    @media screen and (max-width: 991px) {
+        background: #a5a5a5;
+        padding: 20px;
+        border-radius: 3px;
+        margin-top: -4px;
+    }
+}
+
+.dropdown {
+    cursor: pointer;
+    vertical-align: center;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(248, 249, 250);
+    font-weight: 900;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(248, 249, 250);
+    font-weight: 900;
+}
+
+.dropdown-menu {
+    background: #747474;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: 8px;
+    border-bottom: 2px solid rgba(248,249,250,.5);
+    border-left: 2px solid rgba(248,249,250,.5);
+    border-right: 2px solid rgba(248,249,250,.5);
+
+    @media screen and (max-width: 991px) {
+        border: 0;
+        margin-top: -8px;
+        background: 0;
     }
 }

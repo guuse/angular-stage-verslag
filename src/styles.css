@@ -13,29 +13,34 @@ body {
     -webkit-font-smoothing: antialiased;
     background: #F8F9FA;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.75;
 }
 
 h1 {
     text-align: center;
     font-weight: 900;
     margin-top: 3vh;
+    font-family: 'Nunito', sans-serif;
 }
 
 h2 {
     margin-top: 18px;
     margin-bottom: 18px;
+    font-family: 'Nunito', sans-serif;
 }
 
 h3 {
     margin-top: 1rem;
     font-size: 120%;
     font-weight: 700;
+    font-family: 'Nunito', sans-serif;
 }
 
 h4 {
     font-size: 200%;
     text-align: left;
     margin-top: 3%;
+    font-family: 'Nunito', sans-serif;
 }
 
 h6 {
@@ -45,6 +50,7 @@ h6 {
     margin-bottom: 1rem;
     margin-top: 1rem;
     line-height: 1.9;
+    font-family: 'Nunito', sans-serif;
 }
 
 a {
@@ -54,11 +60,11 @@ a {
 .dropdown-item strong {
     font-size: 120%;
     text-transform: uppercase;
-    color: #5f5e5d;
+    color: rgba(248, 249, 250, 1);
 }
 
 .dropdown-item p {
-    color: #5f5e5d;
+    color: rgba(248, 249, 250, .8);
     margin-bottom: 0;
 }
 
@@ -86,12 +92,14 @@ a {
     font-size: 110%;
     font-weight: 900;
     background-color: inherit;
+    color: white;
 }
 
 .dropdown-item.active strong{
     font-size: 110%;
     font-weight: 900;
     background-color: inherit;
+    color: white;
 }
 
 .map {
