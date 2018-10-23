@@ -1,36 +1,37 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-    <img src="../../../assets/logo.png" class="navbar-brand nav-img">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse navbar-wrapper" id="navbarSupportedContent">
-        <div *ngIf="nav.data">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-                </li>
-                <li class="nav-item" *ngFor="let link of nav.data.navigation">
-                    <a class="nav-link nav-linkje" routerLink="/{{PrismicDOM.RichText.asText(link.nav_item)}}"
-                       routerLinkActive="active">{{PrismicDOM.RichText.asText(link.nav_item)}}</a>
-                </li>
-                <li ngbDropdown class="nav-item dropdown" routerLinkActive="active">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                       ngbDropdownToggle=""
-                       [@routerTransition]>
-                        competenties
-                    </a>
-                    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="">
-                        <div *ngFor="let drop of nav.data.dropdown">
-                            <a class="dropdown-item nav-item"
-                               routerLink="/competenties/{{PrismicDOM.RichText.asText(drop.dropdown_item)}}" routerLinkActive="active">
-                                <div [innerHTML]="replace(PrismicDOM.RichText.asHtml(drop.dropdown_item))">
-                                </div>
-                            </a>
+<div class="header"></div>
+<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+<label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+</label>
+<div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+        <li>Guus Ekkelenkamp <span>Web Developer</span></li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item" *ngFor="let link of nav.data.navigation">
+            <a class="nav-link nav-linkje" routerLink="/{{PrismicDOM.RichText.asText(link.nav_item)}}"
+               routerLinkActive="active">{{PrismicDOM.RichText.asText(link.nav_item)}}</a>
+        </li>
+        <li ngbDropdown class="nav-item dropdown" routerLinkActive="active">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+               ngbDropdownToggle=""
+               [@routerTransition]>
+                competenties
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="">
+                <div *ngFor="let drop of nav.data.dropdown">
+                    <a class="dropdown-item nav-item"
+                       routerLink="/competenties/{{PrismicDOM.RichText.asText(drop.dropdown_item)}}"
+                       routerLinkActive="active">
+                        <div [innerHTML]="replace(PrismicDOM.RichText.asHtml(drop.dropdown_item))">
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
