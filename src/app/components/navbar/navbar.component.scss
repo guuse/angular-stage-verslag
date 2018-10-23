@@ -165,3 +165,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     }
 }
 
+.logo {
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+}

@@ -24,7 +24,7 @@ h2 {
 
     @media screen and (max-width: 991px) {
         flex-direction: column;
-        margin: 0 10px;
+        margin: 0 -18px;
     }
 
     :hover {
@@ -38,6 +38,7 @@ h2 {
         flex: 2;
         padding: 10px;
         width: 100%;
+        text-transform: capitalize;
 
         @media screen and (max-width: 991px) {
             margin: 10px 0;

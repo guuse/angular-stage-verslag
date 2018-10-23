@@ -39,4 +39,8 @@ export class CompetentieComponent implements OnInit {
     goBack() {
         this._location.back();
     }
+
+    public replace(content: string) {
+        return content.replace(/-/g, ' ').replace(/1/g, '').replace(/E/g, 'e');
+    }
 }

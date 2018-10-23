@@ -14,7 +14,7 @@
         <ng-container *ngIf="content.data.body[1]">
             >
             <a routerLink="../{{ PrismicDOM.RichText.asText(content.data.competentie_cat) }}" routerLinkActive="active">
-                {{PrismicDOM.RichText.asText(content.data.competentie_cat)}}
+                {{replace(PrismicDOM.RichText.asText(content.data.competentie_cat))}}
             </a>
         </ng-container>
         >
