@@ -9,7 +9,6 @@ import {Location} from '@angular/common';
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
-    animations: [routerTransition]
 })
 export class NavbarComponent implements OnInit {
     PrismicDOM = PrismicDOM;

@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { PrismicService } from '../../services/prismic.service';
 import PrismicDOM from 'prismic-dom';
-import { routerTransition } from '../../routing/animations';
 
 @Component({
-  selector: 'app-competenties',
-  templateUrl: './competenties.component.html',
-  styleUrls: ['./competenties.component.scss']
+    selector: 'app-competenties',
+    templateUrl: './competenties.component.html',
+    styleUrls: ['./competenties.component.scss'],
 })
 export class CompetentiesComponent implements OnInit {
     PrismicDOM = PrismicDOM;

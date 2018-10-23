@@ -1,5 +1,9 @@
 .welcome {
     margin-top: 100px;
+
+    @media screen and (max-width: 991px) {
+        margin-top: 75px;
+    }
 }
 
 .back {
@@ -22,6 +26,11 @@
         color: #5F5F5F;
         text-decoration: none;
     }
+
+    @media screen and (max-width: 991px) {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 }
 
 h1 {
@@ -37,7 +46,22 @@ hr {
     }
 }
 
-.text {
+.compTitle h1{
+    @media screen and (max-width: 991px) {
+        font-size: 36px;
+        margin: 0;
+    }
+}
+
+.text hr{
+    margin: 0 25vw;
+
+    @media screen and (max-width: 991px) {
+        margin: 0 36px;
+    }
+}
+
+.desc {
     margin: 0 25vw;
 
     @media screen and (max-width: 991px) {
