@@ -1,9 +1,9 @@
 .welcome {
     margin: 0 18vw;
 
-@media screen and (max-width: 991px) {
-    margin: 0 36px;
-}
+    @media screen and (max-width: 991px) {
+        margin: 0 36px;
+    }
 }
 
 h1 {
@@ -14,7 +14,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.home-blocks {
+.comp-blocks {
     margin: 0 -8vw;
     padding: 0;
     display: flex;
@@ -25,6 +25,10 @@ h2 {
     @media screen and (max-width: 991px) {
         flex-direction: column;
         margin: 0 10px;
+    }
+
+    :hover {
+        text-decoration: none;
     }
 
     .block {
@@ -39,13 +43,15 @@ h2 {
             margin: 10px 0;
             min-height: 0;
         }
-
-        p:hover {
-            text-decoration: none;
-        }
-
-        h2:hover {
-            text-decoration: none;
-        }
     }
+}
+
+h2:hover {
+    font-weight: 900;
+    color: #5F5F5F;
+}
+
+p:hover {
+    font-weight: 900;
+    color: #5F5F5F;
 }

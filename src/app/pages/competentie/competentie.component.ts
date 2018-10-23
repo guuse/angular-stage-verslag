@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { from } from 'rxjs';
 import { PrismicService } from '../../services/prismic.service';
 import PrismicDOM from 'prismic-dom';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-competentie',
@@ -16,7 +17,8 @@ export class CompetentieComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
-        private prismicService: PrismicService
+        private prismicService: PrismicService,
+        private _location: Location,
     ) {
     }
 
@@ -32,5 +34,9 @@ export class CompetentieComponent implements OnInit {
     getPageDocument(uid: string): void {
         from(this.prismicService.getPageDocument(uid))
             .subscribe(content => this.content = content['value']);
+    }
+
+    goBack() {
+        this._location.back();
     }
 }

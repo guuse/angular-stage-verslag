@@ -1,10 +1,32 @@
+.welcome {
+    margin-top: 100px;
+}
+
+.back {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.back:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.path {
+    text-align: center;
+    text-transform: lowercase;
+
+    a:hover {
+        cursor: pointer;
+        font-weight: 900;
+        color: #5F5F5F;
+        text-decoration: none;
+    }
+}
+
 h1 {
     margin-bottom: 2%;
-    margin-top: 100px;
-
-    @media screen and (max-width: 991px) {
-        margin-top: 50px;
-    }
+    margin-top: 0;
 }
 
 hr {

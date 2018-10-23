@@ -1,4 +1,27 @@
 <div class="welcome" *ngIf="content.data">
+    <div class="path">
+        <ng-container *ngIf="content.data.body[1]">
+            <a routerLink="../{{ PrismicDOM.RichText.asText(content.data.competentie_cat) }}" routerLinkActive="active" class="back">
+                &larr;
+            </a>
+        </ng-container>
+        <ng-container *ngIf="!content.data.body[1]">
+            <a routerLink="../../competenties" routerLinkActive="active" class="back">
+                &larr;
+            </a>
+        </ng-container>
+        <a routerLink="../../competenties" routerLinkActive="active">competenties</a>
+        <ng-container *ngIf="content.data.body[1]">
+            >
+            <a routerLink="../{{ PrismicDOM.RichText.asText(content.data.competentie_cat) }}" routerLinkActive="active">
+                {{PrismicDOM.RichText.asText(content.data.competentie_cat)}}
+            </a>
+        </ng-container>
+        >
+        <a>
+            {{PrismicDOM.RichText.asText(content.data.title)}}
+        </a>
+    </div>
     <div class="text">
         <div class="compTitle">
             <h1>{{PrismicDOM.RichText.asText(content.data.title)}}</h1>

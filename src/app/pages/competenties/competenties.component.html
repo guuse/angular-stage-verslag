@@ -4,7 +4,7 @@
             <h1>{{ PrismicDOM.RichText.asText(nav.data.title) }}</h1>
         </div>
         <div>
-            <div class="home-blocks">
+            <div class="comp-blocks">
                 <ng-container *ngFor="let slice of nav.data.body | slice: 0 : 2 ">
                     <div class="block">
                         <a routerLink="{{ PrismicDOM.RichText.asText(slice.primary.comp_title) }}"
@@ -19,7 +19,7 @@
                     </div>
                 </ng-container>
             </div>
-            <div class="home-blocks">
+            <div class="comp-blocks">
                 <ng-container *ngFor="let slice of nav.data.body | slice : 2 : 5">
                     <div class="block">
                         <a routerLink="{{ PrismicDOM.RichText.asText(slice.primary.comp_title) }}"
