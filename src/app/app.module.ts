@@ -20,6 +20,7 @@ import { ImageModalComponent } from './components/image-modal/image-modal.compon
 import { SubTitleComponent } from './slices/sub-title/sub-title.component';
 import { ClickOutsideModule } from 'ng4-click-outside';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CompetentiesComponent } from './pages/competenties/competenties.component';
 
 library.add(faGithub, faLinkedin, faEnvelope);
 
@@ -37,6 +38,7 @@ library.add(faGithub, faLinkedin, faEnvelope);
         DocumentenLijstComponent,
         ImageModalComponent,
         SubTitleComponent,
+        CompetentiesComponent,
     ],
     imports: [
         BrowserModule,

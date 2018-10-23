@@ -1,23 +1,3 @@
-.dropdown {
-    cursor: pointer;
-    vertical-align: center;
-}
-
-.dropdown-menu {
-    background: rgba(95,95,95,.9);
-    border: 0;
-    margin-top: 10px;
-
-    @media screen and (max-width: 991px) {
-        border: 0;
-        margin-top: -8px;
-        font-size: 80%;
-    }
-}
-
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
-
-
 .header {
     display: block;
     margin: 0 auto;
@@ -56,12 +36,17 @@
 #sidebarMenu {
     height: 100%;
     position: fixed;
-    left: 0;
+    right: 0;
     width: 250px;
     margin-top: 60px;
-    transform: translateX(-250px);
+    transform: translateX(250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(248,248,248,0) 80%);
+    background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(248,248,248,0) 100%);
+
+    @media screen and (max-width: 991px){
+        background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(95,95,95,.5) 100%);
+
+    }
 }
 
 .sidebarMenuInner {
@@ -73,7 +58,6 @@
 .sidebarMenuInner li {
     list-style: none;
     color: #fff;
-    text-transform: uppercase;
     font-weight: bold;
     padding: 20px;
     cursor: pointer;
@@ -88,7 +72,6 @@
 
 .sidebarMenuInner li a {
     color: #fff;
-    text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -104,18 +87,6 @@ input[type=checkbox] {
     display: none;
 }
 
-.sidebarIconToggle {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    cursor: pointer;
-    position: fixed;
-    z-index: 99;
-    top: 22px;
-    left: 15px;
-    height: 22px;
-    width: 22px;
-}
-
 .spinner {
     transition: all 0.3s;
     box-sizing: border-box;
@@ -129,7 +100,7 @@ input[type=checkbox] {
     transition: all 0.3s;
     box-sizing: border-box;
     position: relative;
-    float: left;
+    float: right;
     margin-top: 3px;
 }
 
@@ -137,14 +108,14 @@ input[type=checkbox] {
     position: relative;
     transition: all 0.3s;
     box-sizing: border-box;
-    float: left;
+    float: right;
 }
 
 .diagonal.part-2 {
     transition: all 0.3s;
     box-sizing: border-box;
     position: relative;
-    float: left;
+    float: right;
     margin-top: 3px;
 }
 
@@ -167,3 +138,32 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: rotate(-135deg);
     margin-top: -9px;
 }
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    top: 22px;
+    right: 40px;
+    height: 22px;
+    width: 22px;
+}
+
+.nav-heading {
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    top: -1px;
+    right: 70px;
+    color: white;
+    border-radius: 50%;
+
+    a {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 200%;
+    }
+}
+

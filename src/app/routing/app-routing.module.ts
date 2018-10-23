@@ -7,6 +7,7 @@ import { CompetentieComponent } from '../pages/competentie/competentie.component
 import { ModuleWithProviders } from '@angular/core';
 import { RouteReuseStrategy } from '@angular/router';
 import { CustomReuseStrategy } from './route.reuse';
+import { CompetentiesComponent } from '../pages/competenties/competenties.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent, data: {state: 'home'}},
     {path: 'stage', component: StageComponent, data: {state: 'stage'}},
     {path: 'documenten', component: DocumentenComponent, data: {state: 'documenten'}},
+    {path: 'competenties', component: CompetentiesComponent, data: {state: 'competenties'}},
     {path: 'competenties/:uid', component: CompetentieComponent, data: {state: 'competentie'}}
 ];
 

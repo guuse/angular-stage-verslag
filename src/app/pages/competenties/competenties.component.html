@@ -1,0 +1,39 @@
+<div class="welcome" *ngIf="nav.data">
+    <div class="home-content">
+        <div class="title">
+            <h1>{{ PrismicDOM.RichText.asText(nav.data.title) }}</h1>
+        </div>
+        <div>
+            <div class="home-blocks">
+                <ng-container *ngFor="let slice of nav.data.body | slice: 0 : 2 ">
+                    <div class="block">
+                        <a routerLink="{{ PrismicDOM.RichText.asText(slice.primary.comp_title) }}"
+                           routerLinkActive="active">
+                            <h2>{{ replace(PrismicDOM.RichText.asText(slice.primary.comp_title)) | titlecase }}</h2>
+                        </a>
+                        <ng-container *ngFor="let item of slice.items" class="gallery-item">
+                            <a routerLink="{{ PrismicDOM.RichText.asText(item.comp_item)}}" routerLinkActive="active">
+                                <p>{{ replace(PrismicDOM.RichText.asText(item.comp_item)) }}</p>
+                            </a>
+                        </ng-container>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="home-blocks">
+                <ng-container *ngFor="let slice of nav.data.body | slice : 2 : 5">
+                    <div class="block">
+                        <a routerLink="{{ PrismicDOM.RichText.asText(slice.primary.comp_title) }}"
+                           routerLinkActive="active">
+                            <h2>{{ replace(PrismicDOM.RichText.asText(slice.primary.comp_title)) }}</h2>
+                        </a>
+                        <ng-container *ngFor="let item of slice.items" class="gallery-item">
+                            <a routerLink="{{ PrismicDOM.RichText.asText(item.comp_item)}}" routerLinkActive="active">
+                                <p>{{ replace(PrismicDOM.RichText.asText(item.comp_item)) }}</p>
+                            </a>
+                        </ng-container>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

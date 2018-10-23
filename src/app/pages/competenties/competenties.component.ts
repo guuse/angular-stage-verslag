@@ -3,20 +3,17 @@ import { from } from 'rxjs';
 import { PrismicService } from '../../services/prismic.service';
 import PrismicDOM from 'prismic-dom';
 import { routerTransition } from '../../routing/animations';
-import {Location} from '@angular/common';
 
 @Component({
-    selector: 'app-navbar',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'],
-    animations: [routerTransition]
+  selector: 'app-competenties',
+  templateUrl: './competenties.component.html',
+  styleUrls: ['./competenties.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class CompetentiesComponent implements OnInit {
     PrismicDOM = PrismicDOM;
     nav = Object;
 
-    constructor(private prismicService: PrismicService,
-                private _location: Location) {
+    constructor(private prismicService: PrismicService) {
 
     }
 
@@ -31,9 +28,5 @@ export class NavbarComponent implements OnInit {
 
     ngOnInit() {
         this.getNavbarDocument();
-    }
-
-    goBack() {
-        this._location.back();
     }
 }

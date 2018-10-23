@@ -57,50 +57,6 @@ a {
     color: #5f5e5d;
 }
 
-.dropdown-item strong {
-    text-transform: uppercase;
-    color: rgba(248, 249, 250, 1);
-}
-
-.dropdown-item p {
-    color: rgba(248, 249, 250, .8);
-    margin-bottom: 0;
-}
-
-.dropdown-item:hover {
-    background-color: #5f5e5d;
-}
-
-.dropdown-item:hover strong {
-    font-weight: 900;
-    background-color: #5f5e5d;
-    color: white;
-}
-
-.dropdown-item:hover p {
-     font-weight: 900;
-     background-color: #5f5e5d;
-     color: white;
- }
-
-.dropdown-item.active {
-    background-color: rgba(165, 165, 165, 0.3);
-}
-
-.dropdown-item.active p{
-    font-size: 110%;
-    font-weight: 900;
-    background-color: inherit;
-    color: white;
-}
-
-.dropdown-item.active strong{
-    font-size: 110%;
-    font-weight: 900;
-    background-color: inherit;
-    color: white;
-}
-
 .map {
     margin-bottom: 2%;
 }
