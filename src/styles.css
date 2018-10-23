@@ -45,7 +45,7 @@ h4 {
 
 h6 {
     font-weight: 700;
-    font-size: 100%;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -58,7 +58,6 @@ a {
 }
 
 .dropdown-item strong {
-    font-size: 120%;
     text-transform: uppercase;
     color: rgba(248, 249, 250, 1);
 }

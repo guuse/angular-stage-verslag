@@ -3,11 +3,11 @@
         <div class="compTitle">
             <h1>{{PrismicDOM.RichText.asText(content.data.title)}}</h1>
         </div>
-        <hr>
+        <hr class="top-line">
         <div class="desc">
             <div [innerHTML]="PrismicDOM.RichText.asHtml(content.data.content_block)"></div>
         </div>
-        <hr *ngIf="!content.data.body[1]">
+        <hr class="bottom-line">
     </div>
     <div *ngFor="let slice of content.data.body" class="slices">
         <div [ngSwitch]="slice.slice_type">
