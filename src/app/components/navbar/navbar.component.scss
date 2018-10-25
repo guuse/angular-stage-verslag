@@ -4,11 +4,15 @@
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    background-color: #5f5f5f;
+    background: linear-gradient(180deg, rgba(95, 95, 95, 1) 0%, rgba(95, 95, 95, .8) 100%);
     position: fixed;
     height: 60px !important;
     overflow: hidden;
     z-index: 10;
+
+    @media screen and (max-width: 991px) {
+        background: #5F5F5F;
+    }
 }
 
 .main {
@@ -36,16 +40,15 @@
 #sidebarMenu {
     height: 100%;
     position: fixed;
-    right: 0;
+    left: 0;
     width: 250px;
     margin-top: 60px;
-    transform: translateX(250px);
+    transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(248,248,248,0) 100%);
+    background: linear-gradient(180deg, rgba(95, 95, 95, .8) 0%, rgba(95, 95, 95, 0) 80%);
 
-    @media screen and (max-width: 991px){
-        background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(95,95,95,.5) 100%);
-
+    @media screen and (max-width: 991px) {
+        background: linear-gradient(180deg, rgba(95, 95, 95, 1) 0%, rgba(165, 165, 165, .8) 100%);
     }
 }
 
@@ -146,7 +149,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     position: fixed;
     z-index: 99;
     top: 22px;
-    right: 40px;
+    left: 40px;
     height: 22px;
     width: 22px;
 }
@@ -172,4 +175,24 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     top: 5px;
     left: 50%;
     transform: translate(-50%);
+}
+
+.toTop {
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    font-size: 150%;
+    z-index: 99;
+    border-radius: 50%;
+    bottom: 75px;
+    background: linear-gradient(180deg, rgba(95, 95, 95, .8) 0%, rgba(95, 95, 95, .3) 100%);
+    padding: 3px 13px;
+    right: 50px;
+    transform: translate(-50%, 50%);
+
+    @media screen and (max-width: 991px) {
+        right: 5px;
+        bottom: 5px;
+        transform: scale(.8);
+    }
 }

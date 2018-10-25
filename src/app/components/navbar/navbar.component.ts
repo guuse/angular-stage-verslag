@@ -3,7 +3,7 @@ import { from } from 'rxjs';
 import { PrismicService } from '../../services/prismic.service';
 import PrismicDOM from 'prismic-dom';
 import { routerTransition } from '../../routing/animations';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-navbar',
@@ -32,7 +32,11 @@ export class NavbarComponent implements OnInit {
         this.getNavbarDocument();
     }
 
-    goBack() {
-        this._location.back();
+    toTop() {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 }
