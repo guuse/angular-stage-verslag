@@ -31,7 +31,7 @@
         <div class="desc" *ngFor="let comp of content.data.competenties">
             <a routerLink="../{{PrismicDOM.RichText.asText(comp.comp_titel)}}" routerLinkActive="active">
                 <h3>
-                    {{replace(PrismicDOM.RichText.asText(comp.comp_titel))}}
+                    {{replace(PrismicDOM.RichText.asText(comp.comp_titel))}}:
                 </h3>
             </a>
             <div [innerHTML]="PrismicDOM.RichText.asHtml(comp.comp_desc)"></div>
