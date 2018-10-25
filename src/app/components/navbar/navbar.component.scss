@@ -4,7 +4,7 @@
     position: fixed;
     overflow: hidden;
     z-index: 10;
-    background: linear-gradient(180deg, #e1e1e1 0%, #f8f9fa 50%);
+    background: linear-gradient(180deg, rgb(225, 225, 225), rgba(250, 250, 250, 1) 50%, rgba(250, 250, 250, 0) 100%);
     height: 60px !important;
 }
 
