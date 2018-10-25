@@ -31,12 +31,4 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
         this.getNavbarDocument();
     }
-
-    toTop() {
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
 }

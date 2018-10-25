@@ -46,14 +46,14 @@ hr {
     }
 }
 
-.compTitle h1{
+.compTitle h1 {
     @media screen and (max-width: 991px) {
         font-size: 36px;
         margin: 0;
     }
 }
 
-.text hr{
+.text hr {
     margin: 0 25vw;
 
     @media screen and (max-width: 991px) {
@@ -87,4 +87,27 @@ hr {
     @media screen and (max-width: 991px) {
         margin-bottom: 50px;
     }
+}
+
+.toTop {
+    cursor: pointer;
+    position: fixed;
+    font-size: 150%;
+    z-index: 99;
+    bottom: 60px;
+    right: 0;
+    transform: translate(-50%, 50%);
+    border-radius: 40%;
+
+    @media screen and (max-width: 991px) {
+        right: -35px;
+        bottom: 35px;
+    }
+}
+
+.topButton {
+    display: inline-block;
+    color: #5F5F5F;
+    font-weight: bold;
+    padding: 6px 20px;
 }

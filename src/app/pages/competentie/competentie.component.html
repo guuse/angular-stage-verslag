@@ -40,4 +40,9 @@
             <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice"></app-documenten-lijst>
         </div>
     </div>
+    <ng-container *ngIf="content.data.body[1]">
+        <div class="toTop" id="toTop" (click)="toTop()">
+            <a class="topButton">&uarr;</a>
+        </div>
+    </ng-container>
 </div>

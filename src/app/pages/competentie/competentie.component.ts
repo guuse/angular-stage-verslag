@@ -36,11 +36,15 @@ export class CompetentieComponent implements OnInit {
             .subscribe(content => this.content = content['value']);
     }
 
-    goBack() {
-        this._location.back();
-    }
-
     public replace(content: string) {
         return content.replace(/-/g, ' ').replace(/1/g, '').replace(/E/g, 'e');
+    }
+
+    toTop() {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 }
