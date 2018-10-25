@@ -1,7 +1,8 @@
 <div class="welcome" *ngIf="content.data">
     <div class="path">
         <ng-container *ngIf="content.data.body[1]">
-            <a routerLink="../{{ PrismicDOM.RichText.asText(content.data.competentie_cat) }}" routerLinkActive="active" class="back">
+            <a routerLink="../{{ PrismicDOM.RichText.asText(content.data.competentie_cat) }}" routerLinkActive="active"
+               class="back">
                 &larr;
             </a>
         </ng-container>
@@ -27,8 +28,13 @@
             <h1>{{PrismicDOM.RichText.asText(content.data.title)}}</h1>
         </div>
         <hr class="top-line">
-        <div class="desc">
-            <div [innerHTML]="PrismicDOM.RichText.asHtml(content.data.content_block)"></div>
+        <div class="desc" *ngFor="let comp of content.data.competenties">
+            <a routerLink="../{{PrismicDOM.RichText.asText(comp.comp_titel)}}" routerLinkActive="active">
+                <h3>
+                    {{replace(PrismicDOM.RichText.asText(comp.comp_titel))}}
+                </h3>
+            </a>
+            <div [innerHTML]="PrismicDOM.RichText.asHtml(comp.comp_desc)"></div>
         </div>
         <hr class="bottom-line">
     </div>
