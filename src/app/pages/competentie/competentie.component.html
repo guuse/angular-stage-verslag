@@ -30,9 +30,11 @@
         <hr class="top-line">
         <div class="desc" *ngFor="let comp of content.data.competenties">
             <a routerLink="../{{PrismicDOM.RichText.asText(comp.comp_titel)}}" routerLinkActive="active">
-                <h3>
-                    {{replace(PrismicDOM.RichText.asText(comp.comp_titel))}}:
-                </h3>
+                <ng-container *ngIf="!content.data.body[1]">
+                    <h3>
+                        {{replace(PrismicDOM.RichText.asText(comp.comp_titel))}}:
+                    </h3>
+                </ng-container>
             </a>
             <div [innerHTML]="PrismicDOM.RichText.asHtml(comp.comp_desc)"></div>
         </div>
