@@ -107,20 +107,30 @@ hr {
     position: fixed;
     font-size: 150%;
     z-index: 99;
-    bottom: 60px;
-    right: 0;
-    transform: translate(-50%, 50%);
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(195, 195, 195, .5);
     border-radius: 40%;
 
     @media screen and (max-width: 991px) {
         right: -35px;
-        bottom: 35px;
+        bottom: 15px;
+        margin-right: 50px;
+        font-size: 100%;
+        background-color: rgba(95, 95, 95, .3);
+
+        a{
+            color: #F8F9FA;
+        }
     }
 }
 
 .topButton {
     display: inline-block;
-    color: #5F5F5F;
-    font-weight: bold;
     padding: 6px 20px;
+    font-weight: 900;
+
+    @media screen and (max-width: 991px) {
+        padding: 6px 13px;
+    }
 }
