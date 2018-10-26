@@ -33,6 +33,6 @@ export class NavbarComponent implements OnInit {
     }
 
     uncheck() {
-        document.getElementById('openSidebarMenu').checked = false;
+        document.getElementById('openSidebarMenu')['checked'] = false;
     }
 }
