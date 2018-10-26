@@ -31,4 +31,8 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
         this.getNavbarDocument();
     }
+
+    uncheck() {
+        document.getElementById('openSidebarMenu').checked = false;
+    }
 }

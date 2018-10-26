@@ -21,6 +21,10 @@ h1 {
     font-weight: 900;
     margin-top: 100px;
     font-family: 'Nunito', sans-serif;
+
+    @media screen and (max-width: 991px) {
+        margin-top: 60px;
+    }
 }
 
 h2 {

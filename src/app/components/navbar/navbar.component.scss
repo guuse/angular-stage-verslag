@@ -45,7 +45,7 @@
     }
 
     @media screen and (max-width: 414px) {
-        background: linear-gradient(150deg, rgba(95, 95, 95, 1), rgba(95, 95, 95, .9) 30%, rgba(95, 95, 95, 0) 80%);
+        background: linear-gradient(150deg, rgba(95, 95, 95, 1), rgba(95, 95, 95, .9) 50%, rgba(95, 95, 95, 0) 90%);
     }
 }
 
@@ -191,7 +191,7 @@ input[type=checkbox] ~ .logo > .headerTitle {
 
     h2 {
         @media screen and (max-width: 991px) {
-            font-size: 20px;
+            font-size: 4vw;
             margin: 0;
         }
     ;
