@@ -9,7 +9,7 @@ import PrismicDOM from 'prismic-dom';
     styleUrls: ['./documenten.component.scss']
 })
 export class DocumentenComponent implements OnInit {
-    documenten = Object;
+    documenten = [];
     PrismicDOM = PrismicDOM;
 
     constructor(private prismicService: PrismicService) {
