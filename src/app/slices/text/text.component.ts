@@ -10,7 +10,7 @@ import { PrismicService } from '../../services/prismic.service';
 })
 
 export class TextComponent {
-    private _text: SafeHtml;
+    private _content: SafeHtml;
 
     constructor(
         private prismicService: PrismicService
@@ -19,10 +19,10 @@ export class TextComponent {
 
     @Input()
     set slice(slice: Object) {
-        this._text = this.prismicService.toHtml(ProjectUtils.childObjectBySelector(slice['primary'], 'text', null));
+        this._content = this.prismicService.toHtml(ProjectUtils.childObjectBySelector(slice['primary'], 'text', null));
     }
 
-    get text(): SafeHtml {
-        return this._text;
+    get content(): SafeHtml {
+        return this._content;
     }
 }

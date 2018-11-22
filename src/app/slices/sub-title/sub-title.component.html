@@ -1,6 +1,6 @@
-<section class="content-section" *ngIf="slice">
-    <div class="desc ">
-        <h4>{{PrismicDOM.RichText.asText(slice.primary.heading)}}</h4>
+<section class="content-section">
+    <div class="desc">
+        <div [innerHTML]="content"></div>
         <hr>
     </div>
 </section>

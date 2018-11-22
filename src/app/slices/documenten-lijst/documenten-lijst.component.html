@@ -1,7 +1,7 @@
-<section class="content-section" *ngIf="slice">
-    <div class="">
-            <p>Link naar: <a href="{{PrismicDOM.Link.url(slice.primary.documenten)}}">
-                {{PrismicDOM.RichText.asText(slice.primary.docu_title)}}
-            </a></p>
-    </div>
+<section class="content-section">
+    <p>Link naar:
+        <a href="{{content}}">
+            {{title}}
+        </a>
+    </p>
 </section>
