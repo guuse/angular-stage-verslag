@@ -1,7 +1,4 @@
 import {Component, Input} from '@angular/core';
-import PrismicDOM from 'prismic-dom';
-import { SafeHtml } from '@angular/platform-browser';
-import { PrismicService } from '../../services/prismic.service';
 import { ProjectUtils } from '../../app.utils';
 
 @Component({
@@ -12,11 +9,6 @@ import { ProjectUtils } from '../../app.utils';
 export class DocumentenLijstComponent {
     private _content: string;
     private _title: string;
-
-    constructor(
-        private prismicService: PrismicService
-    ) {
-    }
 
     @Input()
     set slice(slice: Object) {

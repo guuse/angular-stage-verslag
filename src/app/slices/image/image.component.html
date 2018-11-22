@@ -1,14 +1,15 @@
-<section *ngIf="slice" class="image">
+<section class="image">
     <app-image-modal
         *ngIf="clicked"
-        [slice] = "slice"
+        [src] = "src"
+        [description] = "description"
         (close)="childCloseEventHandler()">
     </app-image-modal>
 
     <div class="image">
         <div class="desc">
-            <img src="{{ slice.primary.image.url }}" (click)="imageClicked()"/>
-            <p>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</p>
+            <img src="{{ src }}" (click)="imageClicked()"/>
+            <p>{{ description }}</p>
         </div>
     </div>
 </section>

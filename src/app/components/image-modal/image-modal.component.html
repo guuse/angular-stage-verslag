@@ -3,8 +3,8 @@
         <div class="wrapper"
              (clickOutside)="hideModal()"
              [delayClickOutsideInit]="true">
-            <img src="{{ slice.primary.image.url }}"/>
-            <h3>{{ PrismicDOM.RichText.asText(slice.primary.description) }}</h3>
+            <img src="{{ src }}"/>
+            <h3>{{ description }}</h3>
         </div>
         <div class="close-wrapper">
             <a (click)="hideModal()" class="close-btn">X</a>
