@@ -1,19 +1,20 @@
-<div class="welcome" *ngIf="stage.data">
+<div class="welcome">
     <div class="text">
         <div class="title">
-            <h1>{{PrismicDOM.RichText.asText(stage.data.title)}}</h1>
+            <h1>{{title}}</h1>
         </div>
+        <hr>
         <div class="desc">
-            <div [innerHTML]="PrismicDOM.RichText.asHtml(stage.data.content_block)"></div>
+            <p>{{description}}</p>
         </div>
     </div>
     <hr>
-    <div *ngFor="let slice of stage.data.body" class="slices">
-        <div [ngSwitch]="slice.slice_type">
-            <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice"></app-sub-title>
-            <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>
-            <app-image *ngSwitchCase="'image'" [slice]="slice"></app-image>
-            <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice"></app-documenten-lijst>
+    <div *ngFor="let slice of slices" class="slices">
+        <div [ngSwitch]="slice.type">
+            <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice.slice"></app-sub-title>
+            <app-text *ngSwitchCase="'text'" [slice]="slice.slice"></app-text>
+            <app-image *ngSwitchCase="'image'" [slice]="slice.slice"></app-image>
+            <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice.slice"></app-documenten-lijst>
         </div>
     </div>
 </div>

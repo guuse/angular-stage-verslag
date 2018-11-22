@@ -1,27 +1,58 @@
 import { Component, OnInit } from '@angular/core';
-import { PrismicService } from '../../services/prismic.service';
 import { from } from 'rxjs';
-import PrismicDOM from 'prismic-dom';
+import { PrismicService } from '../../services/prismic.service';
+import { ProjectUtils } from '../../app.utils';
 
 @Component({
     selector: 'app-documenten',
     templateUrl: './documenten.component.html',
     styleUrls: ['./documenten.component.scss']
 })
-export class DocumentenComponent implements OnInit {
-    documenten = Object;
-    PrismicDOM = PrismicDOM;
 
-    constructor(private prismicService: PrismicService) {
+export class DocumentenComponent implements OnInit {
+    private _title: string;
+    private _description: string;
+    private _slices: {
+        slice: Object;
+        type: string
+    }[];
+
+    constructor(
+        private prismicService: PrismicService
+    ) {
     }
 
     ngOnInit() {
-        this.getDocumentenDocument();
+        this.getDocument();
     }
 
-    getDocumentenDocument(): void {
-        from(this.prismicService.getDocumentenDocument())
-            .subscribe(documenten => this.documenten = documenten['value']);
+    getDocument(): void {
+        from(this.prismicService.getDocument('documenten'))
+            .subscribe((document) => {
+                this._title = ProjectUtils.childObjectBySelector(document['value'], 'data/title/0/text', null);
+                this._description = ProjectUtils.childObjectBySelector(document['value'], 'data/description/0/text', null);
+                this._slices = this.generateSlices(ProjectUtils.childObjectBySelector(document['value'], 'data/body', []));
+            });
     }
 
+    get title(): string {
+        return this._title;
+    }
+
+    get description(): string {
+        return this._description;
+    }
+
+    get slices(): { slice: Object, type: string }[] {
+        return this._slices;
+    }
+
+    private generateSlices(data) {
+        return data.map((slice) => {
+            return {
+                slice: slice,
+                type: slice.slice_type
+            };
+        });
+    }
 }

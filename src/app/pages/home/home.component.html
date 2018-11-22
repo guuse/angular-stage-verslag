@@ -1,15 +1,15 @@
-<div class="welcome" *ngIf="home.data">
+<div class="welcome">
     <div class="home-content">
         <div class="title">
-            <h1>{{ PrismicDOM.RichText.asText(home.data.title) }}</h1>
+            <h1>{{title}}</h1>
         </div>
         <div class="desc">
-            <p>{{ PrismicDOM.RichText.asText(home.data.description) }}</p>
+            <p>{{description}}</p>
         </div>
         <div class="home-blocks">
-            <ng-container *ngFor="let slice of home.data.body">
+            <ng-container *ngFor="let slice of slices">
                 <div class="block">
-                    <div [innerHTML]="PrismicDOM.RichText.asHtml(slice.primary.text)"></div>
+                    <div [innerHTML]="slice.text"></div>
                 </div>
             </ng-container>
         </div>

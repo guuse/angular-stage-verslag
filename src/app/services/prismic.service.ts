@@ -2,12 +2,16 @@ import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 
 import * as Prismic from 'prismic-javascript';
+import * as PrismicDOM from 'prismic-dom';
 import {CONFIG} from '../../prismic-configuration';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable({providedIn: 'root'})
 export class PrismicService {
 
-    constructor() {
+    constructor(
+        private sanitizer: DomSanitizer,
+    ) {
     }
 
     getApi(): Promise<void | any> {
@@ -18,14 +22,24 @@ export class PrismicService {
             .catch(e => console.log(`Error during connection to your Prismic API: ${e}`));
     }
 
-    getHomepageDocument(): Promise<void | Observable<Object>> {
+    getSingle(type): Promise<void | Observable<Object>> {
         return this.getApi().then((api) => {
-            return api.getSingle('homepage')
-                .then((home) => {
-                    return of(home);
+            return api.getSingle(type)
+                .then((document) => {
+                    return of(document);
                 });
         });
     }
+
+    getDocument(type): Promise<void | Observable<Object>> {
+        return this.getApi().then((api) => {
+            return api.getByUID('content', type)
+                .then((document) => {
+                    return of(document);
+                });
+        });
+    }
+
 
     getStageDocument(): Promise<void | Observable<Object>> {
         return this.getApi().then((api) => {
@@ -61,5 +75,9 @@ export class PrismicService {
                     return of(content);
                 });
         });
+    }
+
+    public toHtml(data) {
+        return this.sanitizer.bypassSecurityTrustHtml(PrismicDOM.RichText.asHtml(data));
     }
 }
