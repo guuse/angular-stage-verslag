@@ -1,5 +1,7 @@
-import {Component, Input} from '@angular/core';
-import PrismicDOM from 'prismic-dom';
+import { Component, Input } from '@angular/core';
+import { ProjectUtils } from '../../app.utils';
+import { SafeHtml } from '@angular/platform-browser';
+import { PrismicService } from '../../services/prismic.service';
 
 @Component({
     selector: 'app-text',
@@ -8,6 +10,19 @@ import PrismicDOM from 'prismic-dom';
 })
 
 export class TextComponent {
-    @Input() slice: Object;
-    PrismicDOM = PrismicDOM;
+    private _text: SafeHtml;
+
+    constructor(
+        private prismicService: PrismicService
+    ) {
+    }
+
+    @Input()
+    set slice(slice: Object) {
+        this._text = this.prismicService.toHtml(ProjectUtils.childObjectBySelector(slice['primary'], 'text', null));
+    }
+
+    get text(): SafeHtml {
+        return this._text;
+    }
 }
