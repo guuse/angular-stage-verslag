@@ -9,6 +9,7 @@
   max-height: 40vh;
   max-width: 40vw;
   border-radius: 10px;
+  transition: all .5s ease;
 
   @media screen and (max-width: 768px){
     max-height: 60vh;
@@ -18,7 +19,6 @@
 
 img:hover {
   box-shadow: 5px 5px 5px #999;
-  transition: all .5s ease;
   cursor: pointer;
   filter: blur(.8px) grayscale(100%);
 }
