@@ -40,43 +40,6 @@ export class PrismicService {
         });
     }
 
-
-    getStageDocument(): Promise<void | Observable<Object>> {
-        return this.getApi().then((api) => {
-            return api.getByUID('content', 'stage')
-                .then((stage) => {
-                    return of(stage);
-                });
-        });
-    }
-
-    getDocumentenDocument(): Promise<void | Observable<Object>> {
-        return this.getApi().then((api) => {
-            return api.getByUID('content', 'documenten')
-                .then((documenten) => {
-                    return of(documenten);
-                });
-        });
-    }
-
-    getNavbarDocument(): Promise<void | Observable<Object>> {
-        return this.getApi().then((api) => {
-            return api.getSingle('navigation')
-                .then((nav) => {
-                    return of(nav);
-                });
-        });
-    }
-
-    getPageDocument(uid: string): Promise<void | Observable<Object>> {
-        return this.getApi().then((api) => {
-            return api.getByUID('content', uid)
-                .then((content) => {
-                    return of(content);
-                });
-        });
-    }
-
     public toHtml(data) {
         return this.sanitizer.bypassSecurityTrustHtml(PrismicDOM.RichText.asHtml(data));
     }

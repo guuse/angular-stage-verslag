@@ -26,13 +26,13 @@ export class CompetentieComponent implements OnInit {
         this.route.params.subscribe(
             params => {
                 const uid = this.route.snapshot.paramMap.get('uid');
-                this.getPageDocument(uid);
+                this.getDocument(uid);
             }
         );
     }
 
-    getPageDocument(uid: string): void {
-        from(this.prismicService.getPageDocument(uid))
+    getDocument(uid: string): void {
+        from(this.prismicService.getDocument(uid))
             .subscribe(content => this.content = content['value']);
     }
 
