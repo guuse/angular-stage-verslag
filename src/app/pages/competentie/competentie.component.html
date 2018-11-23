@@ -1,54 +1,54 @@
-<div class="welcome" *ngIf="content.data">
+<div class="welcome">
     <div class="path">
-        <ng-container *ngIf="content.data.body[1]">
-            <a routerLink="../{{ PrismicDOM.RichText.asText(content.data.competentie_cat) }}" routerLinkActive="active"
+        <ng-container *ngIf="body">
+            <a routerLink="../{{ category }}" routerLinkActive="active"
                class="back">
                 &larr;
             </a>
         </ng-container>
-        <ng-container *ngIf="!content.data.body[1]">
+        <ng-container *ngIf="!body">
             <a routerLink="../../competenties" routerLinkActive="active" class="back">
                 &larr;
             </a>
         </ng-container>
         <a routerLink="../../competenties" routerLinkActive="active">competenties</a>
-        <ng-container *ngIf="content.data.body[1]">
+        <ng-container *ngIf="body">
             >
-            <a routerLink="../{{ PrismicDOM.RichText.asText(content.data.competentie_cat) }}" routerLinkActive="active">
-                {{replace(PrismicDOM.RichText.asText(content.data.competentie_cat))}}
+            <a routerLink="../{{ category }}" routerLinkActive="active">
+                {{replace(category)}}
             </a>
         </ng-container>
         >
         <a>
-            {{PrismicDOM.RichText.asText(content.data.title)}}
+            {{title}}
         </a>
     </div>
     <div class="text">
         <div class="compTitle">
-            <h1>{{PrismicDOM.RichText.asText(content.data.title)}}</h1>
+            <h1>{{title}}</h1>
         </div>
         <hr class="top-line">
-        <div class="desc" *ngFor="let comp of content.data.competenties">
-            <a routerLink="../{{PrismicDOM.RichText.asText(comp.comp_titel)}}" routerLinkActive="active">
-                <ng-container *ngIf="!content.data.body[1]">
+        <div class="desc" *ngFor="let comp of competenties">
+            <a routerLink="../{{comp.title}}" routerLinkActive="active">
+                <ng-container *ngIf="!body">
                     <h3>
-                        {{replace(PrismicDOM.RichText.asText(comp.comp_titel))}}:
+                        {{replace(comp.title)}}:
                     </h3>
                 </ng-container>
             </a>
-            <div [innerHTML]="PrismicDOM.RichText.asHtml(comp.comp_desc)"></div>
+            <div [innerHTML]="comp.desc"></div>
         </div>
         <hr class="bottom-line">
     </div>
-    <div *ngFor="let slice of content.data.body" class="slices">
-        <div [ngSwitch]="slice.slice_type">
-            <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice"></app-sub-title>
-            <app-text *ngSwitchCase="'text'" [slice]="slice"></app-text>
-            <app-image *ngSwitchCase="'image'" [slice]="slice"></app-image>
-            <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice"></app-documenten-lijst>
+    <div *ngFor="let slice of slices" class="slices">
+        <div [ngSwitch]="slice.type">
+            <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice.slice"></app-sub-title>
+            <app-text *ngSwitchCase="'text'" [slice]="slice.slice"></app-text>
+            <app-image *ngSwitchCase="'image'" [slice]="slice.slice"></app-image>
+            <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice.slice"></app-documenten-lijst>
         </div>
     </div>
-    <ng-container *ngIf="content.data.body[1]">
+    <ng-container *ngIf="body">
         <div class="toTop" id="toTop" (click)="toTop()">
             <a class="topButton">&uarr;</a>
         </div>
