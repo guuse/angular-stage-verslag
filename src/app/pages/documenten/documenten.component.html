@@ -1,4 +1,5 @@
-<div class="welcome">
+<app-loader *ngIf="!loaded"></app-loader>
+<div class="welcome" *ngIf="loaded">
     <div class="text">
         <div class="title">
             <h1>{{title}}</h1>

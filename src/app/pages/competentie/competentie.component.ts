@@ -14,6 +14,7 @@ import { SafeHtml } from '@angular/platform-browser';
 })
 
 export class CompetentieComponent implements OnInit {
+    private _loaded: boolean;
     private _body: any;
     private _title: string;
     private _category: string;
@@ -35,6 +36,7 @@ export class CompetentieComponent implements OnInit {
     ngOnInit() {
         this.route.params.subscribe(
             params => {
+                this._loaded = false;
                 const uid = this.route.snapshot.paramMap.get('uid');
                 this.getDocument(uid);
             }
@@ -49,6 +51,7 @@ export class CompetentieComponent implements OnInit {
                 this._category = ProjectUtils.childObjectBySelector(document['value'], 'data/competentie_cat/0/text', null);
                 this._competenties = this.generateCompetenties(ProjectUtils.childObjectBySelector(document['value'], 'data/competenties', []));
                 this._slices = this.generateSlices(ProjectUtils.childObjectBySelector(document['value'], 'data/body', []));
+                this._loaded = true;
             });
     }
 
@@ -68,6 +71,10 @@ export class CompetentieComponent implements OnInit {
                 type: slice.slice_type
             };
         });
+    }
+
+    get loaded(): boolean {
+        return this._loaded;
     }
 
     get category(): string {

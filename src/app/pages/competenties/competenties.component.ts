@@ -11,6 +11,7 @@ import { SafeHtml } from '@angular/platform-browser';
     styleUrls: ['./competenties.component.scss'],
 })
 export class CompetentiesComponent implements OnInit {
+    private _loaded: boolean;
     private _title: string;
     private _slices: {
         text: string;
@@ -25,6 +26,7 @@ export class CompetentiesComponent implements OnInit {
     }
 
     ngOnInit() {
+        this._loaded = false;
         this.getSingle();
     }
 
@@ -33,7 +35,12 @@ export class CompetentiesComponent implements OnInit {
             .subscribe((document) => {
                 this._title = ProjectUtils.childObjectBySelector(document['value'], 'data/title/0/text', null);
                 this._slices = this.generateSlices(ProjectUtils.childObjectBySelector(document['value'], 'data/body', []));
+                this._loaded = true;
             });
+    }
+
+    get loaded(): boolean {
+        return this._loaded;
     }
 
     get title(): string {

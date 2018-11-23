@@ -11,6 +11,7 @@ import { ProjectUtils } from '../../app.utils';
 })
 
 export class HomeComponent implements OnInit {
+    private _loaded: boolean;
     private _title: string;
     private _description: string;
     private _slices: {
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
+        this._loaded = false;
         this.getSingleDocument();
     }
 
@@ -32,7 +34,12 @@ export class HomeComponent implements OnInit {
                 this._title = ProjectUtils.childObjectBySelector(document['value'], 'data/title/0/text', null);
                 this._description = ProjectUtils.childObjectBySelector(document['value'], 'data/description/0/text', null);
                 this._slices = this.generateSlices(ProjectUtils.childObjectBySelector(document['value'], 'data/body', []));
+                this._loaded = true;
             });
+    }
+
+    get loaded(): boolean {
+        return this._loaded;
     }
 
     get title(): string {
