@@ -22,6 +22,7 @@ import { ClickOutsideModule } from 'ng4-click-outside';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompetentiesComponent } from './pages/competenties/competenties.component';
 import { LoaderComponent } from './component/loader/loader.component';
+import { VideoComponent } from './slices/video/video.component';
 
 library.add(faGithub, faLinkedin, faEnvelope);
 
@@ -41,6 +42,7 @@ library.add(faGithub, faLinkedin, faEnvelope);
         SubTitleComponent,
         CompetentiesComponent,
         LoaderComponent,
+        VideoComponent,
     ],
     imports: [
         BrowserModule,

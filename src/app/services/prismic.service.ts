@@ -43,4 +43,8 @@ export class PrismicService {
     public toHtml(data) {
         return this.sanitizer.bypassSecurityTrustHtml(PrismicDOM.RichText.asHtml(data));
     }
+
+    public toHtmlVideo(data) {
+        return this.sanitizer.bypassSecurityTrustHtml(data);
+    }
 }
