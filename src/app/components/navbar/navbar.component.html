@@ -1,15 +1,22 @@
 <div class="header"></div>
 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-<label for="openSidebarMenu" class="sidebarIconToggle">
+<label for="openSidebarMenu" class="sidebarIconToggle mobile">
     <div class="spinner diagonal part-1"></div>
     <div class="spinner horizontal"></div>
     <div class="spinner diagonal part-2"></div>
 </label>
-<div class="logo">
-    <h2 class="headerTitle"><a routerLink="/home">GUUS EKKELENKAMP</a></h2>
+<div class="desktop">
+    <a routerLink="/home" routerLinkActive="active" (click)="uncheck()">HOME</a>
+    <a routerLink="/stage" routerLinkActive="active" (click)="uncheck()">STAGE</a>
+    <a routerLink="/documenten" routerLinkActive="active" (click)="uncheck()">DOCUMENTEN</a>
+    <a routerLink="/competenties" routerLinkActive="active" (click)="uncheck()">COMPETENTIES</a>
+</div>
+
+<div class="logo mobile">
+    <a routerLink="/home">GUUS EKKELENKAMP</a>
 </div>
 <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
+    <ul class="sidebarMenuInner mobile">
         <li style="cursor: default">Guus Ekkelenkamp <span>Stageverslag</span></li>
         <li>
             <a routerLink="/home" routerLinkActive="active" (click)="uncheck()">HOME</a>

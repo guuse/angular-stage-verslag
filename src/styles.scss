@@ -12,8 +12,9 @@ body {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     background: #F8F9FA;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.75;
+    letter-spacing: .8px;
 }
 
 h1 {
@@ -60,7 +61,12 @@ h6 {
 }
 
 a {
-    color: #5f5e5d;
+    color: #737271;
+
+    &:hover {
+        color: #5F5E5D;
+        font-weight: 900;
+    }
 }
 
 .map {
