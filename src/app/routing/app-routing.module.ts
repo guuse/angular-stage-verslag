@@ -8,12 +8,14 @@ import { ModuleWithProviders } from '@angular/core';
 import { RouteReuseStrategy } from '@angular/router';
 import { CustomReuseStrategy } from './route.reuse';
 import { CompetentiesComponent } from '../pages/competenties/competenties.component';
+import { ProjectenComponent } from '../pages/projecten/projecten.component';
 
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent, data: {state: 'home'}},
     {path: 'stage', component: StageComponent, data: {state: 'stage'}},
+    {path: 'projecten', component: ProjectenComponent, data: {state: 'projecten'}},
     {path: 'documenten', component: DocumentenComponent, data: {state: 'documenten'}},
     {path: 'competenties', component: CompetentiesComponent, data: {state: 'competenties'}},
     {path: 'competenties/:uid', component: CompetentieComponent, data: {state: 'competentie'}}

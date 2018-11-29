@@ -21,7 +21,7 @@
         font-weight: 600;
         color: #e1e1e1;
         flex: 1;
-        font-size: 24px;
+        font-size: 18px;
         padding: 0 25px;
 
         &:hover,
@@ -95,10 +95,6 @@
     padding: 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-
-    @media screen and (max-width: 414px) {
-        padding: 10px;
-    }
 }
 
 .sidebarMenuInner li span {
@@ -113,11 +109,6 @@
     text-decoration: none;
     padding: 25px 0;
     padding-right: 150px;
-
-    @media screen and (max-width: 414px) {
-        padding: 15px 0;
-        padding-right: 150px;
-    }
 }
 
 input[type="checkbox"]:checked ~ #sidebarMenu {
