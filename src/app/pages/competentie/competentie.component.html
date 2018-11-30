@@ -1,5 +1,5 @@
 <app-loader *ngIf="!loaded"></app-loader>
-<div class="welcome" *ngIf="loaded">
+<div class="welcome center-content" *ngIf="loaded">
     <div class="path">
         <ng-container *ngIf="body">
             <a routerLink="../{{ category }}" routerLinkActive="active"
@@ -37,7 +37,7 @@
                     </h3>
                 </ng-container>
             </a>
-            <div [innerHTML]="comp.desc"></div>
+            <div class="compDesc" [innerHTML]="comp.desc"></div>
         </div>
         <hr class="bottom-line">
     </div>

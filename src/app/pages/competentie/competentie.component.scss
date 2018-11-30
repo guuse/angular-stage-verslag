@@ -8,6 +8,14 @@
     }
 }
 
+.compDesc {
+    padding: 0 50px;
+
+    @media screen and (max-width: 991px) {
+        padding: 0 25px;
+    }
+}
+
 .back {
     cursor: pointer;
     margin-right: 10px;
@@ -55,21 +63,7 @@ hr {
     }
 }
 
-.text hr {
-    margin: 0 25vw;
-
-    @media screen and (max-width: 991px) {
-        margin: 0 36px;
-    }
-}
-
 .desc {
-    margin: 0 25vw;
-
-    @media screen and (max-width: 991px) {
-        margin: 0 20px;
-    }
-
     h3 {
         text-transform: capitalize;
     }
@@ -81,14 +75,6 @@ hr {
         text-decoration: none;
         text-shadow: 1px 1px $scorpion;
 
-    }
-}
-
-.slices {
-    margin: 0 18vw;
-
-    @media screen and (max-width: 991px) {
-        margin: 0 20px;
     }
 }
 

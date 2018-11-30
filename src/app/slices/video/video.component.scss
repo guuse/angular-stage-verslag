@@ -2,6 +2,14 @@
     position: relative;
     height: 450px;
 
+    @media screen and (max-width: 991px) {
+        height: 280px;
+    }
+
+    @media screen and (max-width: 550px) {
+        height: 160px;
+    }
+
     .video {
         position: absolute;
         top: 50%;
@@ -13,4 +21,14 @@
 ::ng-deep iframe {
     height: 392px;
     width: 800px;
+
+    @media screen and (max-width: 991px) {
+        height: 245px;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 550px) {
+        height: 147px;
+        width: 300px;
+    }
 }

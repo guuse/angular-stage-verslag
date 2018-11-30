@@ -1,82 +1,82 @@
 .modal-item {
-  position: fixed;
-  z-index: 120;
-  background-color: rgba(0, 0, 0, .8);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation-name: modalBg;
-  animation-duration: 1s;
-  cursor: pointer;
+    position: fixed;
+    z-index: 120;
+    background-color: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-name: modalBg;
+    animation-duration: 1s;
+    cursor: pointer;
 }
 
 .wrapper {
-  display: inline-block;
-  position: relative;
-  margin: auto;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation-name: modal;
-  animation-duration: 1s;
-  cursor: default;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: modal;
+    animation-duration: 1s;
+    cursor: default;
 }
 
 .wrapper img {
-  max-height: 90vh;
-  max-width: 90vw;
-  animation-name: modal;
-  animation-duration: 1s;
+    max-height: 90vh;
+    max-width: 90vw;
+    animation-name: modal;
+    animation-duration: 1s;
 
-  @media screen and (max-width: 678px) {
-    margin: 0 5vw;
-  }
+    @media screen and (max-width: 678px) {
+        margin: 0 5vw;
+    }
 }
 
 .wrapper h3 {
-  color: white;
-  font-weight: 900;
+    color: white;
+    font-weight: 900;
 
-  @media screen and (max-width: 678px){
-    margin: 0 5vw;
-  }
+    @media screen and (max-width: 678px) {
+        margin: 0 5vw;
+    }
 }
 
 .close-wrapper {
-  position: absolute;
-  top: 2vh;
-  right: 2vw;
-  transform: scale(1.2);
-  display: inline;
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    transform: scale(1.2);
+    display: inline;
 }
 
 .close-btn {
-  background: rgba(255, 255, 255, .8);
-  border-radius: 25px;
-  cursor: pointer;
-  padding: 6px 24px;
-  font-weight: 900;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 6px 24px;
+    font-weight: 900;
 }
 
 .close-btn:hover {
-  background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1);
 }
 
 @keyframes modalBg {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  to {
-    background-color: rgba(0, 0, 0, .8);
-  }
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, .8);
+    }
 }
 
 @keyframes modal {
-  from {
-    top: -50%;
-  }
-  to {
-    top: 50%;
-  }
+    from {
+        top: -50%;
+    }
+    to {
+        top: 50%;
+    }
 }
