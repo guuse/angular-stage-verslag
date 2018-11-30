@@ -1,3 +1,5 @@
+@import "~src/styles";
+
 .header {
     width: 100%;
     max-width: 100%;
@@ -27,7 +29,7 @@
         &:hover,
         &.active{
             text-decoration: none;
-            border-bottom: 5px solid #5F5E5D;
+            border-bottom: 5px solid $chicago;
             background-color: rgba(105, 105, 105, 0.5);
         }
     }

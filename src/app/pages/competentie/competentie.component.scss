@@ -1,3 +1,5 @@
+@import "~src/styles";
+
 .welcome {
     margin-top: 100px;
 
@@ -22,8 +24,8 @@
 
     a:hover {
         cursor: pointer;
-        text-shadow: 1px 1px #5F5F5F;
-        color: #5F5F5F;
+        text-shadow: 1px 1px $scorpion;
+        color: $scorpion;
         text-decoration: none;
     }
 
@@ -75,9 +77,9 @@ hr {
     a:hover {
         cursor: pointer;
         font-weight: 900;
-        color: #5F5F5F;
+        color: $scorpion;
         text-decoration: none;
-        text-shadow: 1px 1px #5F5F5F;
+        text-shadow: 1px 1px $scorpion;
 
     }
 }
@@ -120,7 +122,7 @@ hr {
         background-color: rgba(95, 95, 95, .3);
 
         a{
-            color: #F8F9FA;
+            color: $athensGray;
         }
     }
 }

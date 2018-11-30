@@ -1,3 +1,5 @@
+@import "~src/styles";
+
 .desc {
   height: 70%;
   margin-top: 1vh;
@@ -18,7 +20,7 @@
 }
 
 img:hover {
-  box-shadow: 5px 5px 5px #999;
+  box-shadow: 5px 5px 5px $dustyGray;
   cursor: pointer;
   filter: blur(.8px) grayscale(100%);
 }
