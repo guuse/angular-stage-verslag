@@ -16,7 +16,7 @@
         </div>
         <div class="home-blocks">
             <ng-container *ngFor="let slice of slices">
-                <div class="block">
+                <div class="block" (click)="goToBlock(slice.url)">
                     <div [innerHTML]="slice.text"></div>
                 </div>
             </ng-container>

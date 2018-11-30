@@ -3,6 +3,7 @@ import { from } from 'rxjs';
 import { PrismicService } from '../../services/prismic.service';
 import { SafeHtml } from '@angular/platform-browser';
 import { ProjectUtils } from '../../app.utils';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -16,9 +17,11 @@ export class HomeComponent implements OnInit {
     private _description: string;
     private _slices: {
         text: SafeHtml;
+        url: string;
     }[];
 
     constructor(
+        private router: Router,
         private prismicService: PrismicService
     ) {
     }
@@ -50,15 +53,20 @@ export class HomeComponent implements OnInit {
         return this._description;
     }
 
-    get slices(): { text: SafeHtml }[] {
+    get slices(): { text: SafeHtml, url: string }[] {
         return this._slices;
     }
 
     private generateSlices(data) {
         return data.map((slice) => {
             return {
-                text: this.prismicService.toHtml(slice.primary.text)
+                text: this.prismicService.toHtml(ProjectUtils.childObjectBySelector(slice['primary'], 'text', [])),
+                url: ProjectUtils.childObjectBySelector(slice['primary'], 'link/0/text', []),
             };
         });
+    }
+
+    goToBlock(url) {
+        this.router.navigate([url]);
     }
 }
