@@ -1,3 +1,5 @@
+@import "~src/styles";
+
 .modal-item {
     position: fixed;
     z-index: 120;
@@ -29,7 +31,7 @@
     animation-name: modal;
     animation-duration: 1s;
 
-    @media screen and (max-width: 678px) {
+    @media screen and (max-width: $largemobilebreakpoint) {
         margin: 0 5vw;
     }
 }
@@ -38,7 +40,7 @@
     color: white;
     font-weight: 900;
 
-    @media screen and (max-width: 678px) {
+    @media screen and (max-width: $largemobilebreakpoint) {
         margin: 0 5vw;
     }
 }

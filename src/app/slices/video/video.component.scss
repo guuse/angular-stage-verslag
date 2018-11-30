@@ -1,12 +1,14 @@
+@import "~src/styles";
+
 .video-wrapper {
     position: relative;
     height: 450px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         height: 280px;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: $homeflexbreakpoint) {
         height: 160px;
     }
 
@@ -22,12 +24,12 @@
     height: 392px;
     width: 800px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         height: 245px;
         width: 500px;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: $homeflexbreakpoint) {
         height: 147px;
         width: 300px;
     }

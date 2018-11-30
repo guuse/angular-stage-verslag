@@ -13,7 +13,7 @@
   border-radius: 10px;
   transition: all .5s ease;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: $largemobilebreakpoint){
     max-height: 60vh;
     max-width: 60vw;
   }

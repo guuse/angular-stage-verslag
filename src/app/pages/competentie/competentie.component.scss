@@ -3,7 +3,7 @@
 .welcome {
     margin-top: 100px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         margin-top: 75px;
     }
 }
@@ -11,7 +11,7 @@
 .compDesc {
     padding: 0 50px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         padding: 0 25px;
     }
 }
@@ -37,7 +37,7 @@
         text-decoration: none;
     }
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         font-size: 16px;
         margin-bottom: 10px;
     }
@@ -51,13 +51,13 @@ h1 {
 hr {
     margin: 20px -18px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         margin: 20px -6px;
     }
 }
 
 .compTitle h1 {
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         font-size: 36px;
         margin: 0;
     }
@@ -85,7 +85,7 @@ hr {
 .bottom-line {
     margin-bottom: 75px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         margin-bottom: 50px;
     }
 }
@@ -100,7 +100,7 @@ hr {
     background-color: rgba(195, 195, 195, .5);
     border-radius: 40%;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         right: -35px;
         bottom: 15px;
         margin-right: 50px;
@@ -118,7 +118,7 @@ hr {
     padding: 6px 20px;
     font-weight: 900;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         padding: 6px 13px;
     }
 }

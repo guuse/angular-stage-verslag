@@ -34,7 +34,7 @@
         }
     }
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         display: none;
     }
 }
@@ -42,7 +42,7 @@
 .mobile {
     display: none;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         display: inherit;
     }
 }
@@ -79,7 +79,7 @@
     transition: transform 250ms ease-in-out;
     background: linear-gradient(180deg, rgb(115, 115, 115) 40%, rgba(115, 115, 115, .9) 50%, rgba(115, 115, 115, 0) 60%);
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: $mobilebreakpoint) {
         background: linear-gradient(180deg, rgb(115, 115, 115) 60%, rgba(115, 115, 115, .9) 70%, rgba(115, 115, 115, 0) 90%);
     }
 }
@@ -179,7 +179,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle {
     transition: all 0.3s;
     transform: translateX(220px);
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tabletbreakpoint) {
         transform: translateX(240px);
     }
 }
@@ -205,7 +205,7 @@ input[type=checkbox] ~ .logo > a {
     height: 22px;
     width: 22px;
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: $mobilebreakpoint) {
         left: 10px;
     }
 }
