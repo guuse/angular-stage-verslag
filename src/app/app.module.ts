@@ -24,6 +24,7 @@ import { CompetentiesComponent } from './pages/competenties/competenties.compone
 import { LoaderComponent } from './components/loader/loader.component';
 import { VideoComponent } from './slices/video/video.component';
 import { ProjectenComponent } from './pages/projecten/projecten.component';
+import {NgxPageScrollModule} from 'ngx-page-scroll';
 
 library.add(faGithub, faLinkedin, faEnvelope);
 
@@ -53,6 +54,7 @@ library.add(faGithub, faLinkedin, faEnvelope);
         FontAwesomeModule,
         ClickOutsideModule,
         BrowserAnimationsModule,
+        NgxPageScrollModule
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA,

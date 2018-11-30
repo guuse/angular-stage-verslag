@@ -1,10 +1,10 @@
 @import "~src/styles";
 
 .welcome {
-    margin-top: 100px;
+    margin: 120px 100px 120px 450px;
 
     @media screen and (max-width: $tabletbreakpoint) {
-        margin-top: 75px;
+        margin: 60px 25px 60px 25px;
     }
 }
 
@@ -90,35 +90,35 @@ hr {
     }
 }
 
-.toTop {
-    cursor: pointer;
+.compNav {
+    max-width: 350px;
     position: fixed;
-    font-size: 150%;
-    z-index: 99;
-    bottom: 40px;
-    right: 40px;
-    background-color: rgba(195, 195, 195, .5);
-    border-radius: 40%;
+    height: 100%;
+    z-index: 1;
+    left: 40px;
+    top: 63px;
+    line-height: 60px;
+    padding: 10px 30px 10px 0;
+    border-right: 2px solid $tapa;
 
     @media screen and (max-width: $tabletbreakpoint) {
-        right: -35px;
-        bottom: 15px;
-        margin-right: 50px;
-        font-size: 100%;
-        background-color: rgba(95, 95, 95, .3);
-
-        a{
-            color: $athensGray;
-        }
+        display: none;
     }
-}
 
-.topButton {
-    display: inline-block;
-    padding: 6px 20px;
-    font-weight: 900;
-
-    @media screen and (max-width: $tabletbreakpoint) {
-        padding: 6px 13px;
+    a {
+        cursor: pointer;
+        display: block;
     }
+
+    .compTitle {
+        padding: 55px 0 40px 0;
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .navItem {
+        font-size: 18px;
+    }
+
 }

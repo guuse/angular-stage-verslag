@@ -1,5 +1,15 @@
 <app-loader *ngIf="!loaded"></app-loader>
-<div class="welcome center-content" *ngIf="loaded">
+<div class="welcome" *ngIf="loaded" id="welcome">
+    <ng-container *ngIf="body">
+        <div class="compNav">
+            <a pageScroll href="#welcome" class="compTitle">{{title}}</a>
+            <ng-container *ngFor="let slice of subTitles">
+                <ng-container *ngIf="slice">
+                    <a pageScroll class="navItem" href="#{{replaceSpace(slice)}}">{{slice}}</a>
+                </ng-container>
+            </ng-container>
+        </div>
+    </ng-container>
     <div class="path">
         <ng-container *ngIf="body">
             <a routerLink="../{{ category }}" routerLinkActive="active"
@@ -50,9 +60,5 @@
             <app-video *ngSwitchCase="'embed_video'" [slice]="slice.slice"></app-video>
         </div>
     </div>
-    <ng-container *ngIf="body">
-        <div class="toTop" id="toTop" (click)="toTop()">
-            <a class="topButton">&uarr;</a>
-        </div>
-    </ng-container>
+    <div id="test"></div>
 </div>

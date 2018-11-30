@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { from } from 'rxjs';
 import { PrismicService } from '../../services/prismic.service';
-import PrismicDOM from 'prismic-dom';
-import { Location } from '@angular/common';
 import { ProjectUtils } from '../../app.utils';
 import { SafeHtml } from '@angular/platform-browser';
+import {PageScrollConfig} from 'ngx-page-scroll';
 
 @Component({
     selector: 'app-competentie',
@@ -15,6 +14,7 @@ import { SafeHtml } from '@angular/platform-browser';
 
 export class CompetentieComponent implements OnInit {
     private _loaded: boolean;
+    private _id = 'test';
     private _body: any;
     private _title: string;
     private _category: string;
@@ -31,6 +31,7 @@ export class CompetentieComponent implements OnInit {
         private route: ActivatedRoute,
         private prismicService: PrismicService,
     ) {
+        PageScrollConfig.defaultScrollOffset = 70;
     }
 
     ngOnInit() {
@@ -73,6 +74,10 @@ export class CompetentieComponent implements OnInit {
         });
     }
 
+    get id(): string {
+        return this._id;
+    }
+
     get loaded(): boolean {
         return this._loaded;
     }
@@ -93,20 +98,24 @@ export class CompetentieComponent implements OnInit {
         return this._title;
     }
 
+    get subTitles() {
+        return this.slices.map((slice) => {
+            if (slice.type === 'sub-title') {
+                return ProjectUtils.childObjectBySelector(slice['slice'], 'primary/heading/0/text', null);
+            }
+            return null;
+        });
+    }
 
     get slices(): { slice: Object; type: string }[] {
         return this._slices;
     }
 
-    public replace(content: string) {
-        return content.replace(/-/g, ' ').replace(/1/g, '').replace(/E/g, 'e');
+    public replaceSpace(content: string) {
+        return content.replace(/ /g, '-');
     }
 
-    toTop() {
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
+    public replace(content: string) {
+        return content.replace(/-/g, ' ').replace(/1/g, '').replace(/E/g, 'e');
     }
 }

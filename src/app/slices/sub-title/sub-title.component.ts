@@ -1,12 +1,12 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProjectUtils } from '../../app.utils';
 
 @Component({
-  selector: 'app-sub-title',
-  templateUrl: './sub-title.component.html',
-  styleUrls: ['./sub-title.component.scss']
+    selector: 'app-sub-title',
+    templateUrl: './sub-title.component.html',
+    styleUrls: ['./sub-title.component.scss']
 })
-export class SubTitleComponent  {
+export class SubTitleComponent {
     private _content: string;
 
     @Input()
@@ -16,5 +16,9 @@ export class SubTitleComponent  {
 
     get content(): string {
         return this._content;
+    }
+
+    public replaceSpace(content: string) {
+        return content.replace(/ /g, '-');
     }
 }

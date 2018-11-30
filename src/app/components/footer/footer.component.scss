@@ -1,10 +1,13 @@
+@import "~src/styles";
+
 .ftr {
+    z-index: 10;
     text-align: center;
     width: 100%;
+    position: sticky;
     padding-top: 1%;
     margin-top: 1%;
-    background: linear-gradient(to top, rgba(82,82,82,0.2) 0%,rgba(82,82,82,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#00000000',GradientType=0 );
+    background: linear-gradient(0deg, $iron, rgba($athensGray, 1) 20%, rgba($athensGray, 0) 100%);
 }
 
 .ftr-icn {

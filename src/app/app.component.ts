@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { routerTransition } from './routing/animations';
 
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
