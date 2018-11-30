@@ -82,7 +82,8 @@ iframe {
         padding: 30px;
         width: 100%;
         transform: scale(1);
-        transition: transform .3s ease;
+        box-shadow: 0 0 0 0 gray;
+        transition: all .3s ease;
 
         &:hover {
             cursor: pointer;
