@@ -10,11 +10,17 @@
                     <div class="block">
                         <a routerLink="{{ slice.title }}"
                            routerLinkActive="active">
-                            <h2>{{ replace(slice.title) | titlecase }}</h2>
+                            <div class="linkWrapper">
+                                <h2>{{ replace(slice.title) }}</h2>
+                                <div class="borderBottom long"></div>
+                            </div>
                         </a>
                         <ng-container *ngFor="let item of slice.items" class="gallery-item">
                             <a routerLink="{{ item.item}}" routerLinkActive="active">
-                                <p>{{ replace(item.item) }}</p>
+                                <div class="linkWrapper">
+                                    <p>{{ replace(item.item) }}</p>
+                                    <div class="borderBottom long"></div>
+                                </div>
                             </a>
                         </ng-container>
                     </div>
@@ -25,11 +31,17 @@
                     <div class="block">
                         <a routerLink="{{ slice.title }}"
                            routerLinkActive="active">
-                            <h2>{{ replace(slice.title) }}</h2>
+                            <div class="linkWrapper">
+                                <h2>{{ replace(slice.title) }}</h2>
+                                <div class="borderBottom short"></div>
+                            </div>
                         </a>
                         <ng-container *ngFor="let item of slice.items" class="gallery-item">
                             <a routerLink="{{ item.item}}" routerLinkActive="active">
-                                <p>{{ replace(item.item) }}</p>
+                                <div class="linkWrapper">
+                                    <p>{{ replace(item.item) }}</p>
+                                    <div class="borderBottom short"></div>
+                                </div>
                             </a>
                         </ng-container>
                     </div>

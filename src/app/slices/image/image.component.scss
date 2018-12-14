@@ -1,32 +1,32 @@
 @import "~src/styles";
 
 .desc {
-  height: 70%;
-  margin-top: 1vh;
-  margin-left: 6vw;
+    height: 70%;
+    margin-top: 1vh;
+    margin-left: 6vw;
 }
 
 .desc img {
-  margin-top: 1rem;
-  max-height: 40vh;
-  max-width: 40vw;
-  border-radius: 10px;
-  transition: all .5s ease;
+    margin-top: 1rem;
+    max-height: 40vh;
+    max-width: 40vw;
+    border-radius: 10px;
+    transition: all .5s ease;
 
-  @media screen and (max-width: $largemobilebreakpoint){
-    max-height: 60vh;
-    max-width: 60vw;
-  }
+    @media screen and (max-width: $largemobilebreakpoint) {
+        max-height: 60vh;
+        max-width: 60vw;
+    }
 }
 
 img:hover {
-  box-shadow: 5px 5px 5px $treePoppy;
-  cursor: pointer;
-  filter: blur(.8px) grayscale(100%);
+    box-shadow: 5px 5px 5px $turquoise;
+    cursor: pointer;
+    filter: blur(.8px) grayscale(100%);
 }
 
 p {
-  font-size: 80%;
-  margin-bottom: 2rem;
-  text-align: left;
+    font-size: 80%;
+    margin-bottom: 2rem;
+    text-align: left;
 }

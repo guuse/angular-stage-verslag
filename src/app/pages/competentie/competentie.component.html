@@ -8,7 +8,10 @@
             <a pageScroll href="#welcome" class="compTitle">{{title}}</a>
             <ng-container *ngFor="let slice of subTitles">
                 <ng-container *ngIf="slice">
-                    <a pageScroll class="navItem" href="#{{replaceSpace(slice)}}">{{slice}}</a>
+                    <a pageScroll class="navItem" href="#{{replaceSpace(slice)}}">
+                        {{slice}}
+                        <span></span>
+                    </a>
                 </ng-container>
             </ng-container>
         </div>
@@ -35,7 +38,8 @@
             <a routerLink="../{{comp.title}}" routerLinkActive="active">
                 <ng-container *ngIf="!body">
                     <h3>
-                        {{replace(comp.title)}}:
+                        {{replace(comp.title)}}
+                        <span></span>
                     </h3>
                 </ng-container>
             </a>

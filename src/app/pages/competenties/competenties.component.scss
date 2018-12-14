@@ -24,8 +24,9 @@ h2 {
     }
 
     .block {
+        background-color: $midnight;
         margin: 25px 25px;
-        border: 1px solid grey;
+        border: 3px solid rgba($turquoise, .8);
         border-radius: 5px;
         flex: 2;
         padding: 10px;
@@ -36,15 +37,77 @@ h2 {
             margin: 10px 0;
             min-height: 0;
         }
+
+        p,
+        h2 {
+            color: $grayNurse;
+        }
     }
 }
 
-h2:hover {
-    font-weight: 900;
-    color: $treePoppy;
+.linkWrapper {
+    position: relative;
+
+    .borderBottom {
+        display: none;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    .long {
+        width: 38%;
+        animation: pulseLong 1.5s infinite;
+    }
+
+    .short {
+        width: 50%;
+        animation: pulseShort 1.5s infinite;
+    }
+
+    &:hover {
+        p,
+        h2 {
+            letter-spacing: 1px;
+            animation: pulseText 1.5s infinite;
+            font-weight: 900;
+            color: $grayNurse;
+        }
+
+        .borderBottom {
+            display: block;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba($grayNurse, 1);
+        }
+    }
 }
 
-p:hover {
-    font-weight: 900;
-    color: $treePoppy;
+@keyframes pulseText {
+    0% {
+        letter-spacing: 1px;
+    }
+    50% {
+        letter-spacing: 1.5px;
+    }
 }
+
+@keyframes pulseLong {
+    0% {
+        width: 38%;
+    }
+    50% {
+        width: 40%;
+    }
+}
+
+@keyframes pulseShort {
+    0% {
+        width: 50%;
+    }
+    50% {
+        width: 53%;
+    }
+}
+
