@@ -32,6 +32,7 @@ export class CompetentieComponent implements OnInit {
         private prismicService: PrismicService,
     ) {
         PageScrollConfig.defaultScrollOffset = 70;
+        PageScrollConfig.defaultDuration = 500;
     }
 
     ngOnInit() {

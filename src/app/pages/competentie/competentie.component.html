@@ -1,5 +1,8 @@
 <app-loader *ngIf="!loaded"></app-loader>
-<div class="welcome" *ngIf="loaded" id="welcome">
+<div [ngClass]="{
+        'welcome' : body,
+        'compCategory' : !body
+    }" *ngIf="loaded" id="welcome">
     <ng-container *ngIf="body">
         <div class="compNav">
             <a pageScroll href="#welcome" class="compTitle">{{title}}</a>
@@ -11,17 +14,6 @@
         </div>
     </ng-container>
     <div class="path">
-        <ng-container *ngIf="body">
-            <a routerLink="../{{ category }}" routerLinkActive="active"
-               class="back">
-                &larr;
-            </a>
-        </ng-container>
-        <ng-container *ngIf="!body">
-            <a routerLink="../../competenties" routerLinkActive="active" class="back">
-                &larr;
-            </a>
-        </ng-container>
         <a routerLink="../../competenties" routerLinkActive="active">competenties</a>
         <ng-container *ngIf="body">
             >
@@ -60,5 +52,4 @@
             <app-video *ngSwitchCase="'embed_video'" [slice]="slice.slice"></app-video>
         </div>
     </div>
-    <div id="test"></div>
 </div>

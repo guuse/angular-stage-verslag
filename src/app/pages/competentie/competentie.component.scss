@@ -1,10 +1,20 @@
 @import "~src/styles";
 
 .welcome {
-    margin: 120px 100px 120px 450px;
+    margin: 120px 60px 120px 350px;
 
     @media screen and (max-width: $tabletbreakpoint) {
         margin: 60px 25px 60px 25px;
+    }
+}
+
+.compCategory {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 25px;
+
+    @media screen and (max-width: $tabletbreakpoint) {
+        padding: 60px 25px;
     }
 }
 
@@ -32,8 +42,8 @@
 
     a:hover {
         cursor: pointer;
-        text-shadow: 1px 1px $scorpion;
-        color: $scorpion;
+        text-shadow: 1px 1px $treePoppy;
+        color: $treePoppy;
         text-decoration: none;
     }
 
@@ -71,9 +81,9 @@ hr {
     a:hover {
         cursor: pointer;
         font-weight: 900;
-        color: $scorpion;
+        color: $treePoppy;
         text-decoration: none;
-        text-shadow: 1px 1px $scorpion;
+        text-shadow: 1px 1px $treePoppy;
 
     }
 }
@@ -91,15 +101,15 @@ hr {
 }
 
 .compNav {
-    max-width: 350px;
+    max-width: 250px;
     position: fixed;
     height: 100%;
     z-index: 1;
     left: 40px;
     top: 63px;
-    line-height: 60px;
+    line-height: 20px;
     padding: 10px 30px 10px 0;
-    border-right: 2px solid $tapa;
+    border-right: 2px solid $midnight;
 
     @media screen and (max-width: $tabletbreakpoint) {
         display: none;
@@ -108,6 +118,13 @@ hr {
     a {
         cursor: pointer;
         display: block;
+
+        &:hover {
+            font-weight: 900;
+            color: $treePoppy;
+            text-decoration: none;
+
+        }
     }
 
     .compTitle {
@@ -119,6 +136,7 @@ hr {
 
     .navItem {
         font-size: 18px;
+        padding: 15px 0;
     }
 
 }

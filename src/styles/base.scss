@@ -9,11 +9,11 @@ html {
 }
 
 body {
-    color: $chicago;
+    color: $midnight;
     font-size: 18px;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    background: $athensGray;
+    background: $grayNurse;
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.75;
     letter-spacing: .8px;
@@ -63,10 +63,10 @@ h6 {
 }
 
 a {
-    color: $tapa;
+    color: $midnight;
 
     &:hover {
-        color: $chicago;
+        color: $midnight;
         font-weight: 900;
     }
 }

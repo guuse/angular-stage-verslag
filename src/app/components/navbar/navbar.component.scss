@@ -6,7 +6,7 @@
     position: fixed;
     overflow: hidden;
     z-index: 10;
-    background: linear-gradient(180deg, rgb(115, 115, 115), rgba(115, 115, 115, 1) 90%, rgba(115, 115, 115, 0) 100%);
+    background: linear-gradient(180deg, $midnight, rgba($midnight, 1) 90%, rgba($midnight, 0) 100%);
     height: 70px;
 }
 
@@ -21,7 +21,7 @@
     a {
         letter-spacing: 3px;
         font-weight: 600;
-        color: #e1e1e1;
+        color: $grayNurse;
         flex: 1;
         font-size: 18px;
         padding: 0 25px;
@@ -29,8 +29,8 @@
         &:hover,
         &.active{
             text-decoration: none;
-            border-bottom: 5px solid $chicago;
-            background-color: rgba(105, 105, 105, 0.5);
+            border-bottom: 5px solid $turquoise;
+            background-color: rgba($turquoise, 0.5);
         }
     }
 
@@ -77,35 +77,35 @@
     z-index: 99;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, rgb(115, 115, 115) 40%, rgba(115, 115, 115, .9) 50%, rgba(115, 115, 115, 0) 60%);
+    background: linear-gradient(180deg, $midnight 40%, rgba($midnight, .9) 50%, rgba($midnight, 0) 60%);
 
     @media screen and (max-width: $mobilebreakpoint) {
-        background: linear-gradient(180deg, rgb(115, 115, 115) 60%, rgba(115, 115, 115, .9) 70%, rgba(115, 115, 115, 0) 90%);
+        background: linear-gradient(180deg, $midnight 60%, rgba($midnight, .9) 70%, rgba($midnight, 0) 90%);
     }
 }
 
 .sidebarMenuInner {
     margin: 0;
     padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    border-top: 1px solid rgba($midnight, 0.10);
 }
 
 .sidebarMenuInner li {
     list-style: none;
-    color: #fff;
+    color: $grayNurse;
     font-weight: bold;
     padding: 20px;
     cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba($midnight, 0.10);
 }
 
 .sidebarMenuInner li span {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.50);
+    color: rgba($grayNurse, 0.50);
 }
 
 .sidebarMenuInner li a {
-    color: #fff;
+    color: $grayNurse;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -129,7 +129,7 @@ input[type=checkbox] {
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: #e1e1e1;
+    background-color: $grayNurse;
 }
 
 .horizontal {
@@ -219,12 +219,12 @@ input[type=checkbox] ~ .logo > a {
     a {
         font-size: 24px;
         line-height: 63px;
-        color: #e1e1e1;
+        color: $grayNurse;
 
         &:hover {
-            color: #e1e1e1;
+            color: $grayNurse;
             text-decoration: none;
-            border-bottom: 2px solid #e1e1e1;
+            border-bottom: 2px solid $grayNurse;
         }
     }
 

@@ -7,7 +7,7 @@
     position: sticky;
     padding-top: 1%;
     margin-top: 1%;
-    background: linear-gradient(0deg, $iron, rgba($athensGray, 1) 20%, rgba($athensGray, 0) 100%);
+    background: linear-gradient(0deg, rgba($midnight, .5), rgba($midnight, .1) 40%, rgba($grayNurse, 0) 100%);
 }
 
 .ftr-icn {
@@ -21,7 +21,7 @@
 
 .ftr a {
     text-decoration: none;
-    color: black;
+    color: $midnight;
 }
 
 .cpyrght a {

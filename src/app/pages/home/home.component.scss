@@ -75,19 +75,19 @@ iframe {
 
     .block {
         margin: 0 30px;
-        border: 1px solid grey;
+        border: 1px solid $midnight;
         border-radius: 5px;
         flex: 1;
         padding: 30px;
         width: 100%;
         transform: scale(1);
-        box-shadow: 0 15px 50px -15px gray;
+        box-shadow: 0 15px 50px -15px $midnight;
         transition: all .3s ease;
 
         &:hover {
             cursor: pointer;
             transform: scale(1.05);
-            box-shadow: 0 30px 50px -15px gray;
+            box-shadow: 0 30px 50px -15px $midnight;
         }
 
         @media screen and (max-width: $blockflexbreakpoint) {
@@ -100,7 +100,7 @@ iframe {
 
             &:hover{
                 text-decoration: none;
-                border-bottom: 2px solid gray;
+                border-bottom: 2px solid $midnight;
             }
         }
     }

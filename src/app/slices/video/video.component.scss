@@ -4,7 +4,7 @@
     position: relative;
     height: 450px;
 
-    @media screen and (max-width: $tabletbreakpoint) {
+    @media screen and (max-width: $blockflexbreakpoint) {
         height: 280px;
     }
 
@@ -24,7 +24,7 @@
     height: 392px;
     width: 800px;
 
-    @media screen and (max-width: $tabletbreakpoint) {
+    @media screen and (max-width: $blockflexbreakpoint) {
         height: 245px;
         width: 500px;
     }

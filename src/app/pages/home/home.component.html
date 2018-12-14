@@ -14,13 +14,13 @@
                 </div>
             </div>
         </div>
-        <div class="home-blocks">
-            <ng-container *ngFor="let slice of slices">
-                <div class="block" (click)="goToBlock(slice.url)">
-                    <div [innerHTML]="slice.text"></div>
-                </div>
-            </ng-container>
-        </div>
+    </div>
+    <div class="home-blocks">
+        <ng-container *ngFor="let slice of slices">
+            <div class="block" (click)="goToBlock(slice.url)">
+                <div [innerHTML]="slice.text"></div>
+            </div>
+        </ng-container>
     </div>
     <iframe
             frameborder="0"
