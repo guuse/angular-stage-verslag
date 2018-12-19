@@ -19,6 +19,14 @@ body {
     letter-spacing: .8px;
 }
 
+::selection {
+    background: $turquoise;
+}
+
+::-moz-selection {
+    background: $turquoise;
+}
+
 h1 {
     text-align: center;
     font-weight: 900;
