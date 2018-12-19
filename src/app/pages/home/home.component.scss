@@ -1,14 +1,5 @@
 @import "~src/styles";
 
-.title {
-    h1 {
-        margin: 120px auto;
-
-        @media screen and (max-width: $tabletbreakpoint) {
-            margin: 60px auto;
-        }
-    }
-}
 .home-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -17,20 +8,38 @@
 .desc {
     display: flex;
     flex-direction: row;
-    margin: 120px auto;
+    margin: 180px auto;
 
-    @media screen and (max-width: $largemobilebreakpoint) {
+    @media screen and (max-width: $tabletbreakpoint) {
         margin: 60px auto;
         flex-direction: column;
     }
 
     .desc-item {
-        width: 50%;
+        width: 40%;
         padding: 0 20px;
 
-        @media screen and (max-width: $largemobilebreakpoint){
+        @media screen and (max-width: $tabletbreakpoint) {
             margin: 30px auto;
             width: 100%;
+        }
+
+        &:first-child {
+            width: 60%;
+
+            @media screen and (max-width: $tabletbreakpoint) {
+                width: 100%;
+            }
+        }
+
+        .title {
+            h1 {
+                margin: 0 auto 60px auto;
+
+                @media screen and (max-width: $tabletbreakpoint) {
+                    margin: 60px auto;
+                }
+            }
         }
     }
 
@@ -38,18 +47,23 @@
         position: relative;
         height: 100%;
 
-        @media screen and (max-width: $largemobilebreakpoint){
+        @media screen and (max-width: $tabletbreakpoint) {
             height: 250px;
         }
 
         img {
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-220deg) saturate(175%) contrast(.7);
             width: auto;
-            height: 300px;
+            height: 400px;
             border-radius: 20%;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @media screen and (max-width: $tabletbreakpoint) {
+                height: 300px;
+            }
         }
     }
 }
@@ -59,7 +73,7 @@ iframe {
     width: 100%;
     height: 200px;
 
-    @media screen and (max-width: $blockflexbreakpoint){
+    @media screen and (max-width: $blockflexbreakpoint) {
         margin-top: 60px;
     }
 }
@@ -99,10 +113,10 @@ iframe {
             min-height: 0;
         }
 
-        ::ng-deep a{
+        ::ng-deep a {
             font-weight: 900;
 
-            &:hover{
+            &:hover {
                 text-decoration: none;
                 border-bottom: 2px solid $midnight;
             }
