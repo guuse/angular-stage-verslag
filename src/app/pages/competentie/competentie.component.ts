@@ -4,7 +4,8 @@ import { from } from 'rxjs';
 import { PrismicService } from '../../services/prismic.service';
 import { ProjectUtils } from '../../app.utils';
 import { SafeHtml } from '@angular/platform-browser';
-import {PageScrollConfig} from 'ngx-page-scroll';
+import { PageScrollConfig } from 'ngx-page-scroll';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-competentie',
@@ -30,6 +31,7 @@ export class CompetentieComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private prismicService: PrismicService,
+        private location: Location,
     ) {
         PageScrollConfig.defaultScrollOffset = 70;
         PageScrollConfig.defaultDuration = 500;
@@ -110,6 +112,10 @@ export class CompetentieComponent implements OnInit {
 
     get slices(): { slice: Object; type: string }[] {
         return this._slices;
+    }
+
+    public goBack() {
+        this.location.back();
     }
 
     public replaceSpace(content: string) {

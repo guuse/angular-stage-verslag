@@ -6,7 +6,18 @@
     <ng-container *ngIf="body">
         <div class="compNav">
             <div class="compTitle">
-                <a routerLink="/competenties/{{category}}" class="arrow">&#8592;<p>back</p></a>
+                <div class="arrows">
+                    <div class="arrow-wrapper">
+                        <a (click)="goBack()">
+                            <p class="arrow">&#8592;</p>
+                            <p>Back</p>
+                        </a>
+                    </div>
+                    <div pageScroll [pageScrollOffset]="190" href="#welcome" class="arrow-wrapper">
+                        <p class="arrow">&#8593;</p>
+                        <p>top</p>
+                    </div>
+                </div>
                 <p>{{title}}</p>
             </div>
             <ng-container *ngFor="let slice of subTitles">
@@ -17,7 +28,7 @@
                     </a>
                 </ng-container>
             </ng-container>
-            <a pageScroll href="#welcome" class="arrow">&#8593;<p>top</p></a>
+
         </div>
     </ng-container>
     <div class="path">
