@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
     private _loaded: boolean;
     private _title: string;
+    private _image: string;
     private _description: string;
     private _slices: {
         text: SafeHtml;
@@ -36,9 +37,14 @@ export class HomeComponent implements OnInit {
             .subscribe((document) => {
                 this._title = ProjectUtils.childObjectBySelector(document['value'], 'data/title/0/text', null);
                 this._description = ProjectUtils.childObjectBySelector(document['value'], 'data/description/0/text', null);
+                this._image = ProjectUtils.childObjectBySelector(document['value'], 'data/home_image/url', null);
                 this._slices = this.generateSlices(ProjectUtils.childObjectBySelector(document['value'], 'data/body', []));
                 this._loaded = true;
             });
+    }
+
+    get image(): string {
+        return this._image;
     }
 
     get loaded(): boolean {
