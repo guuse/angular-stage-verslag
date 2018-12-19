@@ -5,7 +5,10 @@
     }" *ngIf="loaded" id="welcome">
     <ng-container *ngIf="body">
         <div class="compNav">
-            <a pageScroll href="#welcome" class="compTitle">{{title}}</a>
+            <div class="compTitle">
+                <a routerLink="/competenties/{{category}}" class="arrow">&#8592;<p>back</p></a>
+                <p>{{title}}</p>
+            </div>
             <ng-container *ngFor="let slice of subTitles">
                 <ng-container *ngIf="slice">
                     <a pageScroll class="navItem" href="#{{replaceSpace(slice)}}">
@@ -14,6 +17,7 @@
                     </a>
                 </ng-container>
             </ng-container>
+            <a pageScroll href="#welcome" class="arrow">&#8593;<p>top</p></a>
         </div>
     </ng-container>
     <div class="path">
