@@ -41,22 +41,31 @@
     text-transform: lowercase;
     border-bottom: 1px solid rgba($midnight, 0);
 
-    a {
-        position: relative;
-        transition: top .2s ease;
-        top: 0;
+    .pathWrapper {
+        p {
+            font-weight: 900;
+            display: inline-block;
+            border-bottom: 1px solid $midnight;
+        }
 
-        &:hover {
-            top: -3px;
-            cursor: pointer;
-            text-decoration: none;
+        a {
+            position: relative;
+            transition: top .2s ease;
+            top: 0;
+
+            &:hover {
+                top: -3px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            @media screen and (max-width: $tabletbreakpoint) {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
         }
     }
 
-    @media screen and (max-width: $tabletbreakpoint) {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
 }
 
 h1 {
@@ -154,50 +163,6 @@ hr {
         hyphens: auto;
     }
 
-    .arrows {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        margin-right: 10px;
-        padding: 20px 0;
-
-        .arrow-wrapper {
-            padding: 0 10px;
-            position: relative;
-            cursor: pointer;
-            width: 50%;
-            display: inline-block;
-            font-weight: normal;
-
-            p {
-                padding-top: 20px;
-                font-size: 12px;
-                margin: 0;
-            }
-
-            .arrow {
-                top: -20px;
-                left: 50%;
-                transform: translateX(-50%);
-                position: absolute;
-                font-size: 20px;
-            }
-
-            &:hover {
-                text-decoration: none;
-                font-weight: 900;
-
-                .back {
-                    animation: backArrow .8s;
-                }
-
-                .up {
-                    animation: upArrow .8s;
-                }
-            }
-        }
-    }
-
     .navItem {
         font-size: 18px;
         margin: 30px 0;
@@ -223,6 +188,58 @@ hr {
 
             span:after {
                 opacity: 1;
+            }
+        }
+    }
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 10px;
+    padding: 20px 0;
+    width: 100%;
+
+    .arrow-wrapper {
+        padding: 0 10px;
+        position: relative;
+        cursor: pointer;
+        width: 50%;
+        display: inline-block;
+        font-weight: normal;
+
+        p {
+            padding-top: 20px;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .arrow {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            font-size: 20px;
+        }
+
+        &:hover {
+            p,
+            a {
+                font-weight: 900;
+                text-decoration: none;
+            }
+
+            .back {
+                animation: backArrow .8s;
+            }
+
+            .up {
+                animation: upArrow .8s;
+            }
+
+            .path {
+                animation: pathArrow .8s;
             }
         }
     }
@@ -264,3 +281,20 @@ hr {
     }
 }
 
+@keyframes pathArrow {
+    0% {
+        left: 50%;
+    }
+    49% {
+        left: 47%;
+        opacity: 0;
+    }
+    50% {
+        left: 53%;
+        opacity: 0;
+    }
+    100% {
+        left: 50%;
+        opacity: 1;
+    }
+}

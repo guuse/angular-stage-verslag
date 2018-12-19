@@ -32,17 +32,27 @@
         </div>
     </ng-container>
     <div class="path">
-        <a routerLink="../../competenties" routerLinkActive="active">competenties</a>
-        <ng-container *ngIf="body">
+        <div class="arrows" *ngIf="!body">
+            <div class="arrow-wrapper">
+                <a routerLink="/competenties" routerLinkActive="active">
+                    <p class="arrow path">&#8592;</p>
+                    <p>Competenties</p>
+                </a>
+            </div>
+        </div>
+        <div class="pathWrapper">
+            <a routerLink="/competenties" routerLinkActive="active">competenties</a>
+            <ng-container *ngIf="body">
+                >
+                <a routerLink="/competenties/{{ category }}" routerLinkActive="active">
+                    {{replace(category)}}
+                </a>
+            </ng-container>
             >
-            <a routerLink="../{{ category }}" routerLinkActive="active">
-                {{replace(category)}}
-            </a>
-        </ng-container>
-        >
-        <a>
-            {{title}}
-        </a>
+            <p>
+                {{title}}
+            </p>
+        </div>
     </div>
     <div class="text">
         <div class="compTitle">
