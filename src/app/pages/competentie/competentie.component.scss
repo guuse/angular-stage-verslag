@@ -193,7 +193,56 @@ hr {
     }
 }
 
-.arrows {
+.breadArrowCompetentie {
+    display: none;
+
+    @media screen and (max-width: $tabletbreakpoint) {
+        cursor: pointer;
+        flex-direction: row;
+        background: $midnight;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        color: $grayNurse;
+        top: 0;
+        left: 0;
+        z-index: 11;
+
+
+        .arrow-wrapper {
+            position: relative;
+            padding: 0 80px;
+            height: 100%;
+
+            &:hover {
+                p,
+                a {
+                    font-weight: 900;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.arrows,
+.breadArrowCategory {
     display: flex;
     justify-content: center;
     flex-direction: row;
