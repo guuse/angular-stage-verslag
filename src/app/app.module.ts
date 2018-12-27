@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -25,6 +24,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { VideoComponent } from './slices/video/video.component';
 import { ProjectenComponent } from './pages/projecten/projecten.component';
 import {NgxPageScrollModule} from 'ngx-page-scroll';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 library.add(faGithub, faLinkedin, faEnvelope);
 
@@ -46,11 +46,11 @@ library.add(faGithub, faLinkedin, faEnvelope);
         LoaderComponent,
         VideoComponent,
         ProjectenComponent,
+        BreadcrumbsComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        NgbModule,
         FontAwesomeModule,
         ClickOutsideModule,
         BrowserAnimationsModule,
