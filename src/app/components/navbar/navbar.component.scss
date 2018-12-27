@@ -77,10 +77,10 @@
     z-index: 99;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, $midnight 40%, rgba($midnight, .9) 50%, rgba($midnight, 0) 60%);
+    background: linear-gradient(180deg, $midnight 40%, rgba($midnight, .9) 50%, rgba($midnight, 0) 80%);
 
     @media screen and (max-width: $mobilebreakpoint) {
-        background: linear-gradient(180deg, $midnight 60%, rgba($midnight, .9) 70%, rgba($midnight, 0) 90%);
+        background: $midnight;
     }
 }
 
@@ -92,25 +92,40 @@
 
 .sidebarMenuInner li {
     list-style: none;
-    color: $grayNurse;
-    font-weight: bold;
-    padding: 20px;
     cursor: pointer;
-    border-bottom: 1px solid rgba($midnight, 0.10);
-}
+    border-bottom: 2px solid $test;
 
-.sidebarMenuInner li span {
-    font-size: 14px;
-    color: rgba($grayNurse, 0.50);
-}
+    p,
+    span{
+        text-align: center;
+        display: block;
+    }
 
-.sidebarMenuInner li a {
-    color: $grayNurse;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 25px 0;
-    padding-right: 150px;
+    p {
+        color: $grayNurse;
+        margin-top: 20px;
+    }
+
+    span {
+        font-size: 14px;
+        color: rgba($grayNurse, 0.50);
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 20px 25px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+        color: $grayNurse;
+
+        &.active {
+            background-color: $test;
+            border-bottom: 0;
+        }
+    }
 }
 
 input[type="checkbox"]:checked ~ #sidebarMenu {
@@ -179,7 +194,17 @@ input[type=checkbox]:checked ~ .sidebarIconToggle {
     transition: all 0.3s;
     transform: translateX(220px);
 
-    @media screen and (max-width: $tabletbreakpoint) {
+    .background {
+        opacity: 1;
+        background-color: $midnight;
+        position: fixed;
+        top: -25px;
+        left: -10px;
+        height: 63px;
+        width: 100vw;
+    }
+
+    @media screen and (max-width: $mobilebreakpoint) {
         transform: translateX(240px);
     }
 }
@@ -205,8 +230,13 @@ input[type=checkbox] ~ .logo > a {
     height: 22px;
     width: 22px;
 
+    .background {
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
     @media screen and (max-width: $mobilebreakpoint) {
-        left: 10px;
+        left: 20px;
     }
 }
 

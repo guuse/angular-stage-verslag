@@ -1,39 +1,43 @@
-    <div class="header"></div>
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-    <label for="openSidebarMenu" class="sidebarIconToggle mobile">
-        <div class="spinner diagonal part-1"></div>
-        <div class="spinner horizontal"></div>
-        <div class="spinner diagonal part-2"></div>
-    </label>
-    <div class="desktop">
-        <a routerLink="/home" routerLinkActive="active" (click)="uncheck()">HOME</a>
-        <a routerLink="/stage" routerLinkActive="active" (click)="uncheck()">STAGE</a>
-        <a routerLink="/projecten" routerLinkActive="active" (click)="uncheck()">PROJECTEN</a>
-        <a routerLink="/documenten" routerLinkActive="active" (click)="uncheck()">DOCUMENTEN</a>
-        <a routerLink="/competenties" routerLinkActive="active" (click)="uncheck()">COMPETENTIES</a>
-    </div>
+<div class="header"></div>
+<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+<label for="openSidebarMenu" class="sidebarIconToggle mobile">
+    <div class="background"></div>
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+</label>
+<div class="desktop">
+    <a routerLink="/home" routerLinkActive="active" (click)="uncheck()">HOME</a>
+    <a routerLink="/stage" routerLinkActive="active" (click)="uncheck()">STAGE</a>
+    <a routerLink="/projecten" routerLinkActive="active" (click)="uncheck()">PROJECTEN</a>
+    <a routerLink="/documenten" routerLinkActive="active" (click)="uncheck()">DOCUMENTEN</a>
+    <a routerLink="/competenties" routerLinkActive="active" (click)="uncheck()">COMPETENTIES</a>
+</div>
 
-    <div class="logo mobile">
-        <a routerLink="/home">GUUS EKKELENKAMP</a>
-    </div>
-    <div id="sidebarMenu">
-        <ul class="sidebarMenuInner mobile">
-            <li style="cursor: default">Guus Ekkelenkamp <span>Stageverslag</span></li>
-            <li>
-                <a routerLink="/home" routerLinkActive="active" (click)="uncheck()">HOME</a>
-            </li>
-            <li>
-                <a routerLink="/stage" routerLinkActive="active" (click)="uncheck()">STAGE</a>
-            </li>
-            <li>
-                <a routerLink="/projecten" routerLinkActive="active" (click)="uncheck()">PROJECTEN</a>
-            </li>
-            <li>
-                <a routerLink="/documenten" routerLinkActive="active" (click)="uncheck()">DOCUMENTEN</a>
-            </li>
-            <li>
-                <a routerLink="/competenties" routerLinkActive="active" (click)="uncheck()">COMPETENTIES</a>
-            </li>
-        </ul>
-    </div>
+<div class="logo mobile">
+    <a routerLink="/home">GUUS EKKELENKAMP</a>
+</div>
+<div id="sidebarMenu">
+    <ul class="sidebarMenuInner mobile">
+        <li style="cursor: default">
+            <p>Guus Ekkelenkamp</p>
+            <span>Stageverslag</span>
+        </li>
+        <li>
+            <a routerLink="/home" routerLinkActive="active" (click)="uncheck()">HOME</a>
+        </li>
+        <li>
+            <a routerLink="/stage" routerLinkActive="active" (click)="uncheck()">STAGE</a>
+        </li>
+        <li>
+            <a routerLink="/projecten" routerLinkActive="active" (click)="uncheck()">PROJECTEN</a>
+        </li>
+        <li>
+            <a routerLink="/documenten" routerLinkActive="active" (click)="uncheck()">DOCUMENTEN</a>
+        </li>
+        <li>
+            <a routerLink="/competenties" routerLinkActive="active" (click)="uncheck()">COMPETENTIES</a>
+        </li>
+    </ul>
+</div>
 
