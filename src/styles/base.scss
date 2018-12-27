@@ -20,11 +20,11 @@ body {
 }
 
 ::selection {
-    background: $turquoise;
+    background: rgba($turquoise, .8);
 }
 
 ::-moz-selection {
-    background: $turquoise;
+    background: rgba($turquoise, .8);
 }
 
 h1 {
