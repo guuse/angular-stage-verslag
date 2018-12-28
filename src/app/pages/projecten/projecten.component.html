@@ -1,21 +1,21 @@
 <app-loader *ngIf="!loaded"></app-loader>
 <div class="welcome center-content" *ngIf="loaded">
-  <div class="text">
-    <div class="title">
-      <h1>{{title}}</h1>
+    <div class="text">
+        <div class="title">
+            <h1>{{title}}</h1>
+        </div>
+        <hr>
+        <div class="desc">
+            <h6>{{description}}</h6>
+        </div>
     </div>
     <hr>
-    <div class="desc">
-      <p>{{description}}</p>
+    <div *ngFor="let slice of slices" class="slices">
+        <div [ngSwitch]="slice.type">
+            <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice.slice"></app-sub-title>
+            <app-text *ngSwitchCase="'text'" [slice]="slice.slice"></app-text>
+            <app-image *ngSwitchCase="'image'" [slice]="slice.slice"></app-image>
+            <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice.slice"></app-documenten-lijst>
+        </div>
     </div>
-  </div>
-  <hr>
-  <div *ngFor="let slice of slices" class="slices">
-    <div [ngSwitch]="slice.type">
-      <app-sub-title *ngSwitchCase="'sub-title'" [slice]="slice.slice"></app-sub-title>
-      <app-text *ngSwitchCase="'text'" [slice]="slice.slice"></app-text>
-      <app-image *ngSwitchCase="'image'" [slice]="slice.slice"></app-image>
-      <app-documenten-lijst *ngSwitchCase="'documenten'" [slice]="slice.slice"></app-documenten-lijst>
-    </div>
-  </div>
 </div>
