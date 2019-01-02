@@ -1,15 +1,13 @@
 <section class="image">
     <app-image-modal
-        *ngIf="clicked"
-        [src] = "src"
-        [description] = "description"
-        (close)="childCloseEventHandler()">
+            *ngIf="clicked"
+            [src]="src"
+            [description]="description"
+            (close)="childCloseEventHandler()">
     </app-image-modal>
 
     <div class="image">
-        <div class="desc">
-            <img src="{{ src }}" (click)="imageClicked()"/>
-            <p>{{ description }}</p>
-        </div>
+        <img src="{{ src }}" (click)="imageClicked()"/>
+        <p>{{ description }}</p>
     </div>
 </section>

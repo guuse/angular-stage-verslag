@@ -1,32 +1,33 @@
 @import "~src/styles";
 
-.desc {
-    height: 70%;
-    margin-top: 1vh;
-    margin-left: 6vw;
-}
+.image {
+    padding: 15px 25px;
 
-.desc img {
-    margin-top: 1rem;
-    max-height: 40vh;
-    max-width: 40vw;
-    border-radius: 10px;
-    transition: all .5s ease;
-
-    @media screen and (max-width: $largemobilebreakpoint) {
-        max-height: 60vh;
-        max-width: 60vw;
+    @media screen and (max-width: $tabletbreakpoint) {
+        text-align: center;
+        padding: 5px 15px;
     }
-}
 
-img:hover {
-    box-shadow: 0 15px 50px -15px $midnight;
-    cursor: pointer;
-    filter: blur(.8px) grayscale(100%);
-}
+    p {
+        font-size: 14px;
+        margin: 0;
+    }
 
-p {
-    font-size: 80%;
-    margin-bottom: 2rem;
-    text-align: left;
+    img {
+        max-width: 500px;
+        max-height: 500px;
+        border-radius: 10px;
+        transition: all .5s ease;
+
+        @media screen and (max-width: $largemobilebreakpoint) {
+            max-height: 300px;
+            max-width: 300px;
+        }
+
+        &:hover {
+            box-shadow: 0 15px 50px -15px $midnight;
+            cursor: pointer;
+            filter: blur(.8px) grayscale(100%);
+        }
+    }
 }

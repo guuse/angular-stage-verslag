@@ -24,6 +24,10 @@
     @media screen and (max-width: $tabletbreakpoint) {
         padding: 0 25px;
     }
+
+    @media screen and (max-width: $largemobilebreakpoint) {
+        padding: 0;
+    }
 }
 
 .back {
@@ -198,7 +202,7 @@ hr {
         position: fixed;
         color: $grayNurse;
         top: 0;
-        left: 100px;
+        left: 90px;
         z-index: 11;
 
         @media screen and (max-width: $mobilebreakpoint) {
@@ -210,7 +214,7 @@ hr {
             position: relative;
             padding: 0 80px;
             height: 100%;
-            left: -100px;
+            left: -90px;
 
             @media screen and (max-width: $mobilebreakpoint) {
                 left: -50px;
