@@ -1,5 +1,18 @@
 @import "~src/styles";
 
-.content {
-    margin-top: 70px;
+.webWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        flex: 1 0 auto;
+        margin-top: 70px;
+    }
+
+    .navBar,
+    .footer{
+        flex-shrink: 0;
+    }
 }
+

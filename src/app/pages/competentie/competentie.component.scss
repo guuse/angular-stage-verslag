@@ -49,6 +49,7 @@
         }
 
         a {
+            text-decoration: none;
             position: relative;
             transition: top .2s ease;
             top: 0;
@@ -171,16 +172,6 @@ hr {
         transition: margin-left .5s ease;
         position: relative;
 
-        span:after {
-            top: 50%;
-            left: 205px;
-            transform: translateY(-50%);
-            position: absolute;
-            transition: opacity .5s ease;
-            opacity: 0;
-            content: ">";
-        }
-
         &:hover {
             margin-left: 8px;
             padding-bottom: 5px;
@@ -207,14 +198,23 @@ hr {
         position: fixed;
         color: $grayNurse;
         top: 0;
-        left: 0;
+        left: 100px;
         z-index: 11;
+
+        @media screen and (max-width: $mobilebreakpoint) {
+            left: 50px;
+        }
 
 
         .arrow-wrapper {
             position: relative;
             padding: 0 80px;
             height: 100%;
+            left: -100px;
+
+            @media screen and (max-width: $mobilebreakpoint) {
+                left: -50px;
+            }
 
             &:hover {
                 p,
@@ -226,15 +226,17 @@ hr {
         }
 
         p {
+            color: $grayNurse;
             position: absolute;
-            top: 25px;
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .arrow {
+            color: $grayNurse;
             position: absolute;
-            top: 5px;
+            top: -10px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -243,6 +245,7 @@ hr {
 
 .arrows,
 .breadArrowCategory {
+    color: $midnight;
     display: flex;
     justify-content: center;
     flex-direction: row;

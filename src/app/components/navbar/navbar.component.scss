@@ -1,6 +1,7 @@
 @import "~src/styles";
 
 nav {
+    z-index: 10;
     top: 0;
     position: fixed;
 }
@@ -10,7 +11,6 @@ nav {
     max-width: 100%;
     position: fixed;
     overflow: hidden;
-    z-index: 10;
     background: linear-gradient(180deg, $midnight, rgba($midnight, 1) 90%, rgba($midnight, 0) 100%);
     height: 70px;
 }
@@ -24,6 +24,7 @@ nav {
     line-height: 63px;
 
     a {
+        text-decoration: none;
         letter-spacing: 3px;
         font-weight: 600;
         color: $grayNurse;
@@ -33,7 +34,6 @@ nav {
 
         &:hover,
         &.active {
-            text-decoration: none;
             border-bottom: 5px solid $turquoise;
             background-color: rgba($turquoise, 0.5);
         }
@@ -45,6 +45,7 @@ nav {
 }
 
 .mobile {
+    z-index: 100;
     display: none;
 
     @media screen and (max-width: $tabletbreakpoint) {
@@ -79,7 +80,7 @@ nav {
     position: fixed;
     left: 0;
     width: 250px;
-    z-index: 99;
+    z-index: 100;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
     background: linear-gradient(180deg, $midnight 40%, rgba($midnight, .9) 50%, rgba($midnight, 0) 80%);
@@ -121,7 +122,6 @@ nav {
         text-decoration: none;
         padding: 20px 25px;
         display: block;
-        width: 100%;
         height: 100%;
         font-weight: bold;
         color: $grayNurse;
@@ -252,13 +252,13 @@ input[type=checkbox] ~ .logo > a {
     text-align: center;
 
     a {
+        text-decoration: none;
         font-size: 24px;
         line-height: 63px;
         color: $grayNurse;
 
         &:hover {
             color: $grayNurse;
-            text-decoration: none;
             border-bottom: 2px solid $grayNurse;
         }
     }

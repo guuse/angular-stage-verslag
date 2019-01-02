@@ -1,8 +1,12 @@
 <div class="webWrapper">
-    <app-navbar></app-navbar>
+    <div class="navBar">
+        <app-navbar></app-navbar>
+    </div>
     <div [@routerTransition]="getState(o)" class="content">
         <router-outlet #o="outlet"></router-outlet>
     </div>
-    <app-footer class="mt-auto"></app-footer>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
 </div>
 
