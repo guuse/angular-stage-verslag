@@ -262,5 +262,44 @@ input[type=checkbox] ~ .logo > a {
             border-bottom: 2px solid $grayNurse;
         }
     }
+}
 
+.arrows {
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: $grayNurse;
+    position: fixed;
+    width: 100%;
+
+    .arrow-wrapper {
+        margin: 0 50px;
+        position: relative;
+
+        &:hover {
+            p,
+            a {
+                font-weight: 900;
+                text-decoration: none;
+            }
+        }
+    }
+
+    p {
+        color: $grayNurse;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .arrow {
+        color: $grayNurse;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

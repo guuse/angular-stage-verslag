@@ -35,18 +35,6 @@
             'breadArrowCompetentie' : body,
             'arrows' : !body
         }">
-            <ng-container *ngIf="body">
-                <div class="arrow-wrapper">
-                    <a (click)="goBack()">
-                        <p class="arrow back">&#8592;</p>
-                        <p>Back</p>
-                    </a>
-                </div>
-                <div pageScroll [pageScrollOffset]="190" href="#welcome" class="arrow-wrapper">
-                    <p class="arrow up">&#8593;</p>
-                    <p>top</p>
-                </div>
-            </ng-container>
             <div class="arrow-wrapper" *ngIf="!body">
                 <a routerLink="/competenties" routerLinkActive="active">
                     <p class="arrow path">&#8592;</p>
@@ -74,14 +62,12 @@
         </div>
         <hr class="top-line">
         <div class="desc" *ngFor="let comp of competenties">
-            <a routerLink="../{{comp.title}}" routerLinkActive="active">
-                <ng-container *ngIf="!body">
-                    <h3>
-                        {{replace(comp.title)}}
-                        <span></span>
-                    </h3>
-                </ng-container>
-            </a>
+            <ng-container *ngIf="!body">
+                <h3 routerLink="../{{comp.title}}" routerLinkActive="active">
+                    {{replace(comp.title)}}
+                    <span></span>
+                </h3>
+            </ng-container>
             <div class="compDesc" [innerHTML]="comp.desc"></div>
         </div>
         <hr class="bottom-line">

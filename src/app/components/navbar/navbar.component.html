@@ -15,9 +15,29 @@
         <a routerLink="/competenties" routerLinkActive="active" (click)="uncheck()">COMPETENTIES</a>
     </div>
 
-    <div class="logo mobile">
-        <a routerLink="/home">GUUS EKKELENKAMP</a>
-    </div>
+    <ng-container *ngIf="!comp">
+        <div class="logo mobile">
+            <a routerLink="/home">GUUS EKKELENKAMP</a>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="comp">
+        <div class="arrows">
+            <div class="mobile">
+                <div class="arrow-wrapper">
+                    <a (click)="goBack()">
+                        <p class="arrow back">&#8592;</p>
+                        <p>Back</p>
+                    </a>
+                </div>
+                <div class="arrow-wrapper">
+                    <a (click)="toTop()">
+                        <p class="arrow back">&#8593;</p>
+                        <p>Top</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ng-container>
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner mobile">
             <li style="cursor: default">

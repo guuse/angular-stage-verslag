@@ -1,21 +1,16 @@
 @import "~src/styles";
 
 .welcome {
-    margin: 120px 60px 120px 350px;
+    margin: 60px 60px 120px 350px;
 
     @media screen and (max-width: $tabletbreakpoint) {
-        margin: 60px 25px 60px 25px;
+        margin: 30px 25px 60px 25px;
     }
 }
 
 .compCategory {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 120px 25px;
-
-    @media screen and (max-width: $tabletbreakpoint) {
-        padding: 60px 25px;
-    }
+    margin: 30px auto 0 auto;
 }
 
 .compDesc {
@@ -95,11 +90,12 @@ hr {
 
 .desc {
     h3 {
+        cursor: pointer;
         text-transform: capitalize;
         transition: margin-left .5s ease;
 
         span:after {
-            transition: opacity .5s ease;
+            transition: all .5s ease;
             opacity: 0;
             content: ">";
         }
@@ -184,65 +180,6 @@ hr {
             span:after {
                 opacity: 1;
             }
-        }
-    }
-}
-
-.breadArrowCompetentie {
-    display: none;
-
-    @media screen and (max-width: $tabletbreakpoint) {
-        cursor: pointer;
-        flex-direction: row;
-        background: $midnight;
-        width: 100%;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        color: $grayNurse;
-        top: 0;
-        left: 90px;
-        z-index: 11;
-
-        @media screen and (max-width: $mobilebreakpoint) {
-            left: 50px;
-        }
-
-
-        .arrow-wrapper {
-            position: relative;
-            padding: 0 80px;
-            height: 100%;
-            left: -90px;
-
-            @media screen and (max-width: $mobilebreakpoint) {
-                left: -50px;
-            }
-
-            &:hover {
-                p,
-                a {
-                    font-weight: 900;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        p {
-            color: $grayNurse;
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .arrow {
-            color: $grayNurse;
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
         }
     }
 }
