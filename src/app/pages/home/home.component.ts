@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     private _loaded: boolean;
     private _title: string;
     private _image: string;
-    private _description: string;
+    private _description: SafeHtml;
     private _slices: {
         text: SafeHtml;
         url: string;
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
         from(this.prismicService.getSingle('homepage'))
             .subscribe((document) => {
                 this._title = ProjectUtils.childObjectBySelector(document['value'], 'data/title/0/text', null);
-                this._description = ProjectUtils.childObjectBySelector(document['value'], 'data/description/0/text', null);
+                this._description = this.prismicService.toHtml(ProjectUtils.childObjectBySelector(document['value'], 'data/description', null));
                 this._image = ProjectUtils.childObjectBySelector(document['value'], 'data/home_image/url', null);
                 this._slices = this.generateSlices(ProjectUtils.childObjectBySelector(document['value'], 'data/body', []));
                 this._loaded = true;
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
         return this._title;
     }
 
-    get description(): string {
+    get description(): SafeHtml {
         return this._description;
     }
 
